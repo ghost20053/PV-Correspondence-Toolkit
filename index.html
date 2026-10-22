@@ -1,1080 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Physical&ndash;Virtual Correspondence Toolkit
-  </title>
-  <link href="css/style.css" rel="stylesheet"/>
-  <script defer="" src="js/script.js">
-  </script>
- </head>
- <body>
-  <!-- Website sidebar -->
-  <aside class="sidebar">
-   <div class="logo">
-    <span class="logo-icon">
-     PV
-    </span>
-    <div>
-     <strong>
-      Correspondence
-     </strong>
-     <small>
-      Developer Toolkit
-     </small>
-    </div>
-   </div>
-   <nav aria-label="Main navigation">
-    <p class="nav-label">
-     GET STARTED
-    </p>
-    <a href="#home">
-     Overview
-    </a>
-    <a href="#principles">
-     Design Considerations
-    </a>
-    <p class="nav-label">
-     TOOLKIT
-    </p>
-    <a href="#worksheet">
-     Developer Worksheet
-    </a>
-    <a href="#case-study">
-     Completed Example
-    </a>
-    <a href="#replication">
-     Replication Guide
-    </a>
-    <p class="nav-label">
-     RESEARCH
-    </p>
-    <a href="#resources">
-     Resources
-    </a>
-   </nav>
-  </aside>
-  <!-- Main content -->
-  <main class="content">
-   <section class="hero" id="home">
-    <span class="eyebrow">
-     PRACTICE-DERIVED TOOLKIT
-    </span>
-    <h1>
-     Physical&ndash;Virtual
-     <span>
-      Correspondence
-     </span>
-    </h1>
-    <p>
-     A developer toolkit for examining how physical
-                objects and virtual representations correspond
-                during interaction in virtual reality.
-    </p>
-    <div class="actions">
-     <a class="button primary" href="#worksheet">
-      Start Worksheet &rarr;
-     </a>
-     <a class="button secondary" href="#principles">
-      Explore Design Considerations
-     </a>
-    </div>
-   </section>
-   <section class="section" id="principles">
-    <h2>
-     Six Design Considerations
-    </h2>
-    <p>
-     Questions to guide your interaction design.
-    </p>
-    <div class="card-grid">
-     <article class="card">
-      <span>
-       01
-      </span>
-      <h3>
-       Intended Action
-      </h3>
-      <p>
-       What should the player physically do?
-      </p>
-     </article>
-     <article class="card">
-      <span>
-       02
-      </span>
-      <h3>
-       Physical Counterpart
-      </h3>
-      <p>
-       What real object supports the action?
-      </p>
-     </article>
-     <article class="card">
-      <span>
-       03
-      </span>
-      <h3>
-       Correspondence
-      </h3>
-      <p>
-       What positions or movements must align?
-      </p>
-     </article>
-     <article class="card">
-      <span>
-       04
-      </span>
-      <h3>
-       System Knowledge
-      </h3>
-      <p>
-       What does the application actually track?
-      </p>
-     </article>
-     <article class="card">
-      <span>
-       05
-      </span>
-      <h3>
-       Starting Arrangement
-      </h3>
-      <p>
-       Where must objects and hands begin?
-      </p>
-     </article>
-     <article class="card">
-      <span>
-       06
-      </span>
-      <h3>
-       Onboarding
-      </h3>
-      <p>
-       How does the player locate and calibrate?
-      </p>
-     </article>
-    </div>
-   </section>
-   <section class="section" id="worksheet">
-    <span class="eyebrow">
-     INTERACTIVE TOOL
-    </span>
-    <h2>
-     Developer Worksheet
-    </h2>
-    <p>
-     Document one physical&ndash;virtual interaction or meaningful
-				iteration using the five-stage reflective workflow.
-    </p>
-    <div class="worksheet-container">
-     <!-- Stage navigation -->
-     <div aria-label="Worksheet stages" class="worksheet-steps">
-      <button class="step active" data-step="0" type="button">
-       1. Details
-      </button>
-      <button class="step" data-step="1" type="button">
-       2. Plan
-      </button>
-      <button class="step" data-step="2" type="button">
-       3. Test
-      </button>
-      <button class="step" data-step="3" type="button">
-       4. Observe
-      </button>
-      <button class="step" data-step="4" type="button">
-       5. Reflect
-      </button>
-      <button class="step" data-step="5" type="button">
-       6. Revise
-      </button>
-     </div>
-     <form id="developer-form">
-      <!-- Project details -->
-      <div class="worksheet-page active" data-page="0">
-       <h3>
-        Project Details
-       </h3>
-       <p>
-        Describe the prototype and interaction being reviewed.
-       </p>
-       <label for="project-name">
-        Project / Prototype
-       </label>
-       <input id="project-name" name="projectName" placeholder="Project name" type="text"/>
-       <label for="interaction">
-        Interaction and intended player action
-       </label>
-       <textarea id="interaction" name="interaction" placeholder="Describe the physical interaction"></textarea>
-       <label for="iteration">
-        Date / Iteration / Tester
-       </label>
-       <input id="iteration" name="iteration" placeholder="e.g. 21 October 2026, Iteration 2" type="text"/>
-       <label for="hardware">
-        Hardware, software and physical props
-       </label>
-       <textarea id="hardware" name="hardware" placeholder="Headset, engine, tracking, physical objects..."></textarea>
-       <h4>
-        Relevant Design Considerations
-       </h4>
-       <p>
-        Select all that apply to this interaction.
-       </p>
-       <div class="consideration-list">
-        <label>
-         <input name="considerations" type="checkbox" value="1"/>
-         1 &mdash; Intended action
-        </label>
-        <label>
-         <input name="considerations" type="checkbox" value="2"/>
-         2 &mdash; Physical counterpart
-        </label>
-        <label>
-         <input name="considerations" type="checkbox" value="3"/>
-         3 &mdash; Correspondence
-        </label>
-        <label>
-         <input name="considerations" type="checkbox" value="4"/>
-         4 &mdash; System knowledge
-        </label>
-        <label>
-         <input name="considerations" type="checkbox" value="5"/>
-         5 &mdash; Starting arrangement
-        </label>
-        <label>
-         <input name="considerations" type="checkbox" value="6"/>
-         6 &mdash; Onboarding
-        </label>
-       </div>
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Physical&ndash;Virtual Correspondence | Honours Research Appendix</title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script defer="" src="js/script.js">
+    </script>
+  </head>
+  <body>
+    <!-- Website sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-icon">PV</span>
+        <div>
+          <strong>Correspondence</strong>
+          <small>Research Appendix</small>
+        </div>
       </div>
-      <!-- Plan -->
-      <div class="worksheet-page" data-page="1">
-       <h3>
-        1. PLAN &mdash; Describe the intended interaction
-       </h3>
-       <p>
-        Identify the physical contact point, what the player sees,
-                    the required alignment and any known constraints.
-       </p>
-       <label for="plan">
-        Intended interaction
-       </label>
-       <textarea id="plan" name="plan" placeholder="What should happen? What physical and virtual objects are involved?" rows="8"></textarea>
-      </div>
-      <!-- Test -->
-      <div class="worksheet-page" data-page="2">
-       <h3>
-        2. TEST &mdash; Make the experiment repeatable
-       </h3>
-       <p>
-        Describe the starting arrangement, test steps,
-                    expected behaviour and tracking conditions.
-       </p>
-       <label for="test">
-        Test procedure
-       </label>
-       <textarea id="test" name="test" placeholder="What will you test, and how will you repeat it?" rows="8"></textarea>
-      </div>
-      <!-- Observe -->
-      <div class="worksheet-page" data-page="3">
-       <h3>
-        3. OBSERVE &mdash; Record what happened
-       </h3>
-       <p>
-        Separate observations from interpretations. Record
-                    successes, mismatches, tracking loss and evidence.
-       </p>
-       <label for="observe">
-        Observations
-       </label>
-       <textarea id="observe" name="observe" placeholder="What actually happened during the test?" rows="8"></textarea>
-      </div>
-      <!-- Reflect -->
-      <div class="worksheet-page" data-page="4">
-       <h3>
-        4. REFLECT &mdash; Explain the design issue
-       </h3>
-       <p>
-        Consider the physical object, virtual representation,
-                    system knowledge, starting arrangement and onboarding.
-       </p>
-       <label for="reflect">
-        Design reflection
-       </label>
-       <textarea id="reflect" name="reflect" placeholder="What might explain the result? What remains uncertain?" rows="8"></textarea>
-      </div>
-      <!-- Revise -->
-      <div class="worksheet-page" data-page="5">
-       <h3>
-        5. REVISE &mdash; Decide what to change next
-       </h3>
-       <p>
-        Identify one practical design change, its rationale,
-                    trade-offs and the next test.
-       </p>
-       <label for="revise">
-        Proposed revision
-       </label>
-       <textarea id="revise" name="revise" placeholder="What will you change and test next?" rows="8"></textarea>
-       <label for="evidence">
-        Evidence references
-       </label>
-       <textarea id="evidence" name="evidence" placeholder="Screenshots, recordings, journal entries or code references"></textarea>
-       <label for="untested">
-        What remains untested?
-       </label>
-       <textarea id="untested" name="untested"></textarea>
-       <label for="next-iteration">
-        Next iteration / date
-       </label>
-       <input id="next-iteration" name="nextIteration" type="text"/>
-      </div>
-      <!-- Worksheet navigation -->
-      <div class="worksheet-controls">
-       <button class="button secondary" id="previous-step" type="button">
-        &larr; Previous
-       </button>
-       <span aria-live="polite" id="step-indicator">
-        Step 1 of 6
-       </span>
-       <button class="button primary" id="next-step" type="button">
-        Next &rarr;
-       </button>
-      </div>
-      <!-- Worksheet file actions -->
-      <div class="worksheet-actions">
-       <div class="save-status">
-        <span aria-live="polite" id="save-indicator" role="status">
-         Ready to save
-        </span>
-       </div>
-       <div class="action-buttons">
-        <button class="button primary" id="export-worksheet" type="button">
-         &darr; Export Worksheet
-        </button>
-        <button class="button secondary" id="reset-worksheet" type="button">
-         + New Worksheet
-        </button>
-       </div>
-      </div>
-     </form>
-    </div>
-   </section>
-   <section class="section case-study" id="case-study">
-    <span class="eyebrow">
-     DOCUMENT 02 &mdash; COMPLETED EXAMPLE
-    </span>
-    <h2>
-     Case Study: Hands-on-Table Calibration
-    </h2>
-    <p>
-     A documented revision from virtual fake-hand targets to physical tabletop contact in the original Honours prototype.
-    </p>
-    <div class="case-study-meta">
-     <div>
-      <span>
-       PROJECT
-      </span>
-      <strong>
-       Tangible Interaction Honours Prototype
-      </strong>
-     </div>
-     <div>
-      <span>
-       HARDWARE
-      </span>
-      <strong>
-       Meta Quest 3
-      </strong>
-     </div>
-     <div>
-      <span>
-       INTERACTION
-      </span>
-      <strong>
-       Physical&ndash;Virtual Tabletop Alignment
-      </strong>
-     </div>
-     <div>
-      <span>
-       TRACKING
-      </span>
-      <strong>
-       Tracked Hands / Untracked Props
-      </strong>
-     </div>
-    </div>
-    <div class="case-study-highlight">
-     <span class="eyebrow">
-      DESIGN PROBLEM
-     </span>
-     <h3>
-      Technical detection does not guarantee meaningful physical correspondence.
-     </h3>
-     <p>
-      The initial calibration approach used virtual fake-hand targets. Although this provided a detectable hand-position condition, the targets were not anchored to the physical tabletop.
-     </p>
-     <p>
-      The procedure was revised to use direct physical contact with the tabletop as the calibration action.
-     </p>
-    </div>
-    <h3 class="case-study-subheading">
-     Development Process
-    </h3>
-    <p>
-     Expand each stage to examine the design decisions documented during development.
-    </p>
-    <div class="case-study-stages">
-     <details class="case-stage" open="">
-      <summary>
-       <span class="case-number">
-        01
-       </span>
-       <span>
-        PLAN &mdash; Intended Interaction
-       </span>
-       <span aria-hidden="true" class="case-chevron">
-        ⌄
-       </span>
-      </summary>
-      <div class="case-stage-content">
-       <p>
-        Before the player begins grasping or placing virtual representations of real objects, the virtual scene must relate meaningfully to the physical tabletop.
-       </p>
-       <p>
-        Calibration should establish a useful spatial reference between the tracked hands and the real surface.
-       </p>
-      </div>
-     </details>
-     <details class="case-stage">
-      <summary>
-       <span class="case-number">
-        02
-       </span>
-       <span>
-        TEST &mdash; Initial Approach and Revision
-       </span>
-       <span aria-hidden="true" class="case-chevron">
-        ⌄
-       </span>
-      </summary>
-      <div class="case-stage-content">
-       <p>
-        The initial approach asked the wearer to align their hands with virtual fake-hand targets, providing a gesture condition the application could detect.
-       </p>
-       <p>
-        During development, this was revised to placing both hands directly on the real tabletop during setup.
-       </p>
-       <p class="case-note">
-        This documents a design change, not a controlled comparison of two methods.
-       </p>
-      </div>
-     </details>
-     <details class="case-stage">
-      <summary>
-       <span class="case-number">
-        03
-       </span>
-       <span>
-        OBSERVE &mdash; Development Findings
-       </span>
-       <span aria-hidden="true" class="case-chevron">
-        ⌄
-       </span>
-      </summary>
-      <div class="case-stage-content">
-       <p>
-        The fake-hand targets could satisfy the technical detection condition, but their placement was not anchored to the real tabletop.
-       </p>
-       <p>
-        This could encourage a hand position inconsistent with the physical contact required later in the experience.
-       </p>
-       <p class="case-note">
-        No quantified accuracy comparison or unfamiliar-participant results were recorded.
-       </p>
-      </div>
-     </details>
-     <details class="case-stage">
-      <summary>
-       <span class="case-number">
-        04
-       </span>
-       <span>
-        REFLECT &mdash; Design Interpretation
-       </span>
-       <span aria-hidden="true" class="case-chevron">
-        ⌄
-       </span>
-      </summary>
-      <div class="case-stage-content">
-       <p>
-        The problem was not simply whether hand tracking recognised a gesture.
-       </p>
-       <p>
-        The calibration action needed to establish a meaningful relationship between the wearer's body, the physical table and the virtual representation.
-       </p>
-       <p>
-        Direct tabletop contact provided a tangible reference that connected intended action, spatial correspondence and onboarding.
-       </p>
-      </div>
-     </details>
-     <details class="case-stage">
-      <summary>
-       <span class="case-number">
-        05
-       </span>
-       <span>
-        REVISE &mdash; Design Response
-       </span>
-       <span aria-hidden="true" class="case-chevron">
-        ⌄
-       </span>
-      </summary>
-      <div class="case-stage-content">
-       <p>
-        The resulting approach used hands-on-table calibration rather than abstract virtual hand targets.
-       </p>
-       <p>
-        A controlled tabletop layout provided repeatable starting positions for untracked physical props.
-       </p>
-       <p>
-        Passthrough instructions helped the wearer locate the real objects before the virtual scene was revealed.
-       </p>
-       <p class="case-note">
-        Further testing would be required to establish suitability for unfamiliar users.
-       </p>
-      </div>
-     </details>
-    </div>
-    <div class="case-study-takeaways">
-     <h3>
-      What Developers Can Learn
-     </h3>
-     <ul>
-      <li>
-       Define the intended physical action first.
-      </li>
-      <li>
-       Check that technical success corresponds with meaningful real-world contact.
-      </li>
-      <li>
-       Distinguish tracked information from assumptions about untracked objects.
-      </li>
-      <li>
-       Use repeatable starting arrangements when continuous prop tracking is unavailable.
-      </li>
-      <li>
-       Treat onboarding and calibration as part of interaction design.
-      </li>
-     </ul>
-    </div>
-    <div class="case-study-limitations">
-     <h3>
-      Evidence and Limitations
-     </h3>
-     <p>
-      This example is based on one developer's iterative practice in the original Honours prototype. It is not an independent participant study or controlled experiment.
-     </p>
-     <p>
-      The example does not establish improved accuracy, comfort, immersion or usability for other players.
-     </p>
-    </div>
-    <div class="case-study-next">
-     <h3>
-      Apply This to Your Project
-     </h3>
-     <p>
-      Consider what your player physically touches, what the virtual scene promises, and what your hardware can actually detect.
-     </p>
-     <a class="button primary" href="#worksheet">
-      Open Developer Worksheet &rarr;
-     </a>
-    </div>
-   </section>
-   <section class="section replication-guide" id="replication">
-    <span class="eyebrow">
-     DOCUMENT 03 &mdash; ORIGINAL HONOURS ARTEFACT
-    </span>
-    <h2>
-     Physical Setup and Replication Guide
-    </h2>
-    <p>
-     This guide describes the original Honours prototype's controlled tabletop arrangement and the information needed to attempt a comparable setup. It is a replication companion, not a verified plug-and-play reproduction package.
-    </p>
-    <div class="replication-notice">
-     <strong>
-      Scope of this guide
-     </strong>
-     <p>
-      The original physical props were
-      <strong>
-       not continuously tracked
-      </strong>
-      . Their correspondence with virtual representations relied on a repeatable starting arrangement, tracked hands, passthrough onboarding and hands-on-table calibration. Later QR-tracking experiments and the conference demonstration are outside this guide's scope.
-     </p>
-    </div>
-    <h3 class="replication-heading">
-     Required Equipment
-    </h3>
-    <div class="replication-table-wrap">
-     <table class="replication-table">
-      <thead>
-       <tr>
-        <th>
-         Component
-        </th>
-        <th>
-         Role in the experience
-        </th>
-        <th>
-         Before attempting replication
-        </th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr>
-        <td>
-         Meta Quest 3 / tracked hands
-        </td>
-        <td>
-         Tracks the wearer's hands and supports VR interaction
-        </td>
-        <td>
-         Check headset setup, permissions and hand visibility
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Unreal Engine project / interaction plugins
-        </td>
-        <td>
-         Runs the original VR implementation
-        </td>
-        <td>
-         Confirm exact engine and plugin versions from the archive
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Real tabletop
-        </td>
-        <td>
-         Stable physical contact and calibration surface
-        </td>
-        <td>
-         Record height, usable area and safe reach
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Marked cloth or equivalent
-        </td>
-        <td>
-         Repeatable starting positions
-        </td>
-        <td>
-         Record marker spacing and placement
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Physical cubes
-        </td>
-        <td>
-         Graspable contact surfaces for virtual counterparts
-        </td>
-        <td>
-         Verify original dimensions, weight and handling properties
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Physical chest / box
-        </td>
-        <td>
-         Contact, containment and lid interaction
-        </td>
-        <td>
-         Measure exterior, interior and lid motion
-        </td>
-       </tr>
-      </tbody>
-     </table>
-    </div>
-    <div class="replication-note">
-     <h3>
-      Original Objects and Substitutes
-     </h3>
-     <p>
-      The original props were sourced from everyday retail and craft suppliers, including Big W and Kaisercraft. Matching a brand or appearance does not establish equivalence. Record any substitutions and evaluate whether they preserve the dimensions, contact surfaces and handling properties required by the intended action.
-     </p>
-    </div>
-    <h3 class="replication-heading">
-     Physical and Virtual Measurement Specifications
-    </h3>
-    <p>
-     Unreal Engine's default distance unit is centimetres. The table separates documented setup features from measurements that still need verification against the original props and archived project.
-    </p>
-    <div class="replication-table-wrap">
-     <table class="replication-table">
-      <thead>
-       <tr>
-        <th>
-         Component
-        </th>
-        <th>
-         Physical specification
-        </th>
-        <th>
-         Virtual specification
-        </th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr>
-        <td>
-         Wooden cubes
-        </td>
-        <td>
-         Kaisercraft 35 &times; 35 &times; 35 mm cubes documented for the
-         <em>
-          later QR demonstration
-         </em>
-         ; original Honours dimensions unverified
-        </td>
-        <td>
-         3.5 &times; 3.5 &times; 3.5 cm is the intended 1:1 equivalent for those later cubes; original virtual mesh dimensions unverified
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Chest / box
-        </td>
-        <td>
-         Retail/craft box; exterior, interior and lid dimensions not recorded
-        </td>
-        <td>
-         Virtual counterpart with interior and lid interaction; dimensions not recorded
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Chest lid
-        </td>
-        <td>
-         Original opening range not measured
-        </td>
-        <td>
-         Interactive virtual lid; rotation limits unverified
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Table
-        </td>
-        <td>
-         Stable tabletop; height and usable area not recorded
-        </td>
-        <td>
-         Virtual tabletop aligned through hand-based calibration
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Marked cloth
-        </td>
-        <td>
-         Hand and prop starting positions marked; spacing not recorded
-        </td>
-        <td>
-         Corresponding virtual placement arrangement
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Hand calibration area
-        </td>
-        <td>
-         Both hands placed on designated tabletop areas
-        </td>
-        <td>
-         Hand detection/calibration volumes; dimensions not recorded
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Hand tracking
-        </td>
-        <td>
-         Meta Quest 3 tracked hands
-        </td>
-        <td>
-         Tracked virtual hand representations
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Physical&ndash;virtual scale
-        </td>
-        <td>
-         Real-world dimensions measured in mm or cm
-        </td>
-        <td>
-         Unreal Engine default: 1 unit = 1 cm
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Object positions
-        </td>
-        <td>
-         Props begin at repeatable starting positions
-        </td>
-        <td>
-         Virtual placement established relative to calibrated tabletop
-        </td>
-       </tr>
-       <tr>
-        <td>
-         Prop tracking
-        </td>
-        <td>
-         Original physical props not continuously tracked
-        </td>
-        <td>
-         Interaction relies on tracked hands and initial arrangement
-        </td>
-       </tr>
-      </tbody>
-     </table>
-    </div>
-    <p class="replication-small">
-     <strong>
-      Still to confirm:
-     </strong>
-     original cube dimensions; chest exterior, interior and lid range; table height and cloth marker spacing; virtual mesh and collision dimensions; starting offsets; archived engine/plugin versions; verified project and evidence links.
-    </p>
-    <h3 class="replication-heading">
-     Suggested Replication Procedure
-    </h3>
-    <ol class="replication-steps">
-     <li>
-      <strong>
-       Prepare the physical area.
-      </strong>
-      <p>
-       Choose a stable table with clear reach and enough space. Remove unrelated objects and obstacles, and avoid unexpected collision hazards.
-      </p>
-     </li>
-     <li>
-      <strong>
-       Measure and mark the layout.
-      </strong>
-      <p>
-       Record chest, cube and hand-placement positions using a consistent physical and virtual coordinate reference.
-      </p>
-     </li>
-     <li>
-      <strong>
-       Check the software environment.
-      </strong>
-      <p>
-       Open the archived project with a verified compatible engine and plugin configuration. Confirm hand tracking works before testing prop correspondence.
-      </p>
-     </li>
-     <li>
-      <strong>
-       Begin with physical-world onboarding.
-      </strong>
-      <p>
-       Use the intended passthrough and instructions so the wearer can locate the real table and props before the virtual scene appears.
-      </p>
-     </li>
-     <li>
-      <strong>
-       Perform hands-on-table calibration.
-      </strong>
-      <p>
-       Have the wearer complete the physical tabletop contact action. Check that the virtual table appears in the intended relationship to the real surface.
-      </p>
-     </li>
-     <li>
-      <strong>
-       Test each intended action.
-      </strong>
-      <p>
-       Check contact points while reaching, grasping, placing and interacting with the chest. Record mismatch, drift or tracking loss.
-      </p>
-     </li>
-     <li>
-      <strong>
-       Document and revise.
-      </strong>
-      <p>
-       Complete the developer worksheet and record measurements, setup conditions, observations and substitutions.
-      </p>
-     </li>
-    </ol>
-    <div class="replication-note">
-     <h3>
-      What Replication Can and Cannot Establish
-     </h3>
-     <p>
-      A successful local recreation can demonstrate that an interaction runs under documented conditions and that physical contact is plausible in that setup. It does not establish general usability, improved immersion or suitability for other rooms, props or players. Report differences rather than treating substituted setups as equivalent.
-     </p>
-    </div>
-    <div class="replication-note">
-     <h3>
-      Evidence and Archive References
-     </h3>
-     <p>
-      The original project repository, demonstration recording and Honours evidence archive are linked in the Research Resources section. Access to the university-hosted archive may require appropriate sharing permissions.
-     </p>
-     <p class="replication-small">
-      Publication status: editable replication companion with outstanding measurements, software configuration and evidence verification.
-     </p>
-    </div>
-    <div class="case-study-next">
-     <h3>
-      Document Your Own Setup
-     </h3>
-     <p>
-      Use the interactive worksheet to record your physical arrangement, calibration behaviour, observed correspondence and next design iteration.
-     </p>
-     <a class="button primary" href="#worksheet">
-      Open Developer Worksheet &rarr;
-     </a>
-    </div>
-   </section>
-   <section class="section" id="resources">
-    <span class="eyebrow">
-     RESEARCH &amp; DOWNLOADS
-    </span>
-    <h2>
-     Research Resources
-    </h2>
-    <p>
-     Explore the original Honours prototype, download the three Appendix C companions and follow the evidence referenced in the replication guide.
-    </p>
-    <h3 class="resources-heading">
-     Appendix C &mdash; Developer Toolkit Documents
-    </h3>
-    <div class="resource-grid">
-     <article class="resource-card">
-      <span class="resource-tag">
-       DOCUMENT 01
-      </span>
-      <h4>
-       Reusable Developer Worksheet
-      </h4>
-      <p>
-       A printable reflective worksheet covering the six design considerations and the Plan&ndash;Test&ndash;Observe&ndash;Reflect&ndash;Revise workflow.
-      </p>
-      <a download="" href="assets/documents/Appendix_C_01_Reusable_Developer_Worksheet.docx">
-       Download worksheet (.docx) &darr;
-      </a>
-     </article>
-     <article class="resource-card">
-      <span class="resource-tag">
-       DOCUMENT 02
-      </span>
-      <h4>
-       Completed Calibration Example
-      </h4>
-      <p>
-       An example of the hands-on-table calibration revision from the original Honours artefact.
-      </p>
-      <a download="" href="assets/documents/Appendix_C_02_Completed_Worksheet_Calibration.docx">
-       Download example (.docx) &darr;
-      </a>
-      <a href="#case-study">
-       Read case study &rarr;
-      </a>
-     </article>
-     <article class="resource-card">
-      <span class="resource-tag">
-       DOCUMENT 03
-      </span>
-      <h4>
-       Physical Setup and Replication Guide
-      </h4>
-      <p>
-       Physical and virtual setup guidance, replication steps and documented limitations.
-      </p>
-      <a download="" href="assets/documents/Appendix_C_03_Physical_Setup_Replication_Guide.docx">
-       Download guide (.docx) &darr;
-      </a>
-      <a href="#replication">
-       Read replication guide &rarr;
-      </a>
-     </article>
-    </div>
-    <h3 class="resources-heading">
-     Development and Evidence
-    </h3>
-    <div class="resource-grid">
-     <article class="resource-card">
-      <span class="resource-tag">
-       SOURCE CODE
-      </span>
-      <h4>
-       Original Prototype Repository
-      </h4>
-      <p>
-       GitHub repository referenced by the replication guide.
-      </p>
-      <a href="https://github.com/ghost20053/VR_HandTracking" rel="noopener noreferrer" target="_blank">
-       View GitHub repository &nearrow;
-      </a>
-     </article>
-     <article class="resource-card">
-      <span class="resource-tag">
-       DEMONSTRATION
-      </span>
-      <h4>
-       Original Demonstration Video
-      </h4>
-      <p>
-       Video URL recorded in the replication guide.
-      </p>
-      <a href="https://youtu.be/ANQCv5A1SBs" rel="noopener noreferrer" target="_blank">
-       Watch demonstration &nearrow;
-      </a>
-     </article>
-     <article class="resource-card">
-      <span class="resource-tag">
-       EVIDENCE ARCHIVE
-      </span>
-      <h4>
-       Honours Evidence Folder
-      </h4>
-      <p>
-       University-hosted evidence folder referenced in the replication guide. Access may depend on sharing permissions.
-      </p>
-      <a href="https://griffitheduau-my.sharepoint.com/:f:/r/personal/holden_phillips_griffithuni_edu_au/Documents/Final%20Draft/Appendix%20A?d=wb45c9e458b284b9fbb992d9c3ec203fc&amp;csf=1&amp;web=1&amp;e=0x6jmB" rel="noopener noreferrer" target="_blank">
-       Open evidence folder &nearrow;
-      </a>
-     </article>
-    </div>
-    <div class="resource-notice">
-     <h3>
-      Honours Exegesis
-     </h3>
-     <p>
-      The exegesis itself is not included here yet because its downloadable file or direct URL was not provided with these website files. Add its verified link when ready.
-     </p>
-     <p>
-      These materials describe the original Honours artefact. Later QR-code tracking work is a separate extension and should not be interpreted as part of the original replication procedure.
-     </p>
-    </div>
-   </section>
-   <footer>
-    <p>
-     Physical&ndash;Virtual Correspondence Design Toolkit | Honours Research Companion
-    </p>
-   </footer>
-  </main>
- </body>
+      <nav aria-label="Main navigation">
+        <p class="nav-label">GET STARTED</p>
+        <a href="#home">Overview</a>
+        <p class="nav-label">RESEARCH</p>
+        <a href="#resources">Research Resources</a>
+        <a href="evidence.html#journal">Reflective Journal</a>
+        <a href="evidence.html#archive">Evidence Archive</a>
+        <a href="#demonstration">Final Demonstration</a>
+        <p class="nav-label">TOOLKIT</p>
+        <a href="#principles">Design Considerations</a>
+        <a href="#worksheet">Developer Worksheet</a>
+        <a href="#case-study">Completed Example</a>
+        <a href="#replication">Replication Guide</a>
+      </nav>
+    </aside>
+    <!-- Main content -->
+    <main class="content">
+      <section class="hero" id="home">
+        <span class="eyebrow">HONOURS RESEARCH APPENDIX</span>
+        <h1>
+          Physical&ndash;Virtual
+          <span>Correspondence</span>
+        </h1>
+        <p>The supporting research appendix for examining how physical objects and virtual representations correspond during interaction in virtual reality.</p>
+        <p>Read the reflective journal, explore development evidence and watch the final demonstration, then use the practice-derived developer toolkit.</p>
+        <div class="actions">
+          <a class="button primary" href="#resources">Explore the Research &rarr;</a>
+          <a class="button secondary" href="#principles">Explore Design Considerations</a>
+        </div>
+      </section>
+      <section class="section" id="resources">
+        <span class="eyebrow">RESEARCH &amp; DOWNLOADS</span>
+        <h2>Research Resources</h2>
+        <p>Start with the reflective journal, development evidence and original prototype. Then use the toolkit documents to apply the research to your own interaction design.</p>
+        <h3 class="resources-heading">Development and Evidence</h3>
+        <div class="resource-grid">
+          <article class="resource-card">
+            <span class="resource-tag">REFLECTIVE JOURNAL</span>
+            <h4>Honours Reflective Development Journal</h4>
+            <p>The development record, design decisions and evidence references for the original Honours prototype.</p>
+            <a href="evidence.html#journal">About the journal &rarr;</a>
+            <a href="assets/evidence/Honours_Reflective_Development_Journal.docx" download>Download journal (.docx) &darr;</a>
+          </article>
+          <article class="resource-card">
+            <span class="resource-tag">SOURCE CODE</span>
+            <h4>Original Prototype Repository</h4>
+            <p>GitHub repository referenced by the replication guide.</p>
+            <a href="https://github.com/ghost20053/VR_HandTracking" rel="noopener noreferrer" target="_blank">View GitHub repository &nearrow;</a>
+          </article>
+          <article class="resource-card">
+            <span class="resource-tag">DEMONSTRATION</span>
+            <h4>Original Demonstration Video</h4>
+            <p>Video URL recorded in the replication guide.</p>
+            <a href="https://youtu.be/ANQCv5A1SBs" rel="noopener noreferrer" target="_blank">Watch demonstration &nearrow;</a>
+          </article>
+          <article class="resource-card">
+            <span class="resource-tag">EVIDENCE ARCHIVE</span>
+            <h4>Honours Evidence Folder</h4>
+            <p>Browse 468 screenshots and 85 video entries from the Honours development archive. Original filenames are retained for reference.</p>
+            <a href="evidence.html#archive">Browse evidence archive &rarr;</a>
+          </article>
+        </div>
+        <h3 class="resources-heading">Developer Toolkit Documents</h3>
+        <div class="resource-grid">
+          <article class="resource-card">
+            <span class="resource-tag">DOCUMENT 01</span>
+            <h4>Reusable Developer Worksheet</h4>
+            <p>A printable reflective worksheet covering the six design considerations and the Plan&ndash;Test&ndash;Observe&ndash;Reflect&ndash;Revise workflow.</p>
+            <a download="" href="assets/Appendix_C_01_Reusable_Developer_Worksheet.docx">Download worksheet (.docx) &darr;</a>
+          </article>
+          <article class="resource-card">
+            <span class="resource-tag">DOCUMENT 02</span>
+            <h4>Completed Calibration Example</h4>
+            <p>An example of the hands-on-table calibration revision from the original Honours artefact.</p>
+            <a download="" href="assets/Appendix_C_02_Completed_Worksheet_Calibration.docx">Download example (.docx) &darr;</a>
+            <a href="#case-study">Read case study &rarr;</a>
+          </article>
+          <article class="resource-card">
+            <span class="resource-tag">DOCUMENT 03</span>
+            <h4>Physical Setup and Replication Guide</h4>
+            <p>Physical and virtual setup guidance, replication steps and documented limitations.</p>
+            <a download="" href="assets/Appendix_C_03_Physical_Setup_Replication_Guide.docx">Download guide (.docx) &darr;</a>
+            <a href="#replication">Read replication guide &rarr;</a>
+          </article>
+        </div>
+        <div class="resource-notice">
+          <h3>Honours Exegesis</h3>
+          <p>The exegesis itself is not included here yet because its downloadable file or direct URL was not provided with these website files. Add its verified link when ready.</p>
+          <p>These materials describe the original Honours artefact. Later QR-code tracking work is a separate extension and should not be interpreted as part of the original replication procedure.</p>
+        </div>
+      </section>
+      <section class="section" id="demonstration" aria-labelledby="demonstration-heading">
+        <span class="eyebrow">FINAL DEMONSTRATION</span>
+        <h2 id="demonstration-heading">Final Demonstration Video</h2>
+        <p>Watch the final demonstration of the original Honours prototype.</p>
+        <video class="demonstration-video" controls playsinline preload="none" poster="assets/videos/final-demonstration-poster.jpg" width="1260" height="540" aria-label="Final demonstration of the original Honours prototype">
+          <source src="assets/videos/final-demonstration.mp4" type="video/mp4">
+          Your browser does not support this video player. <a href="https://youtu.be/ANQCv5A1SBs">Watch the demonstration on YouTube</a>.
+        </video>
+        <p>If the video does not play, use the YouTube version below.</p>
+        <a class="button secondary" href="https://youtu.be/ANQCv5A1SBs" target="_blank" rel="noopener noreferrer">Watch on YouTube &nearrow;</a>
+      </section>
+      <section class="section" id="principles">
+        <h2>Six Design Considerations</h2>
+        <p>Questions to guide your interaction design.</p>
+        <div class="card-grid">
+          <article class="card">
+            <span>01</span>
+            <h3>Intended Action</h3>
+            <p>What should the player physically do?</p>
+          </article>
+          <article class="card">
+            <span>02</span>
+            <h3>Physical Counterpart</h3>
+            <p>What real object supports the action?</p>
+          </article>
+          <article class="card">
+            <span>03</span>
+            <h3>Correspondence</h3>
+            <p>What positions or movements must align?</p>
+          </article>
+          <article class="card">
+            <span>04</span>
+            <h3>System Knowledge</h3>
+            <p>What does the application actually track?</p>
+          </article>
+          <article class="card">
+            <span>05</span>
+            <h3>Starting Arrangement</h3>
+            <p>Where must objects and hands begin?</p>
+          </article>
+          <article class="card">
+            <span>06</span>
+            <h3>Onboarding</h3>
+            <p>How does the player locate and calibrate?</p>
+          </article>
+        </div>
+      </section>
+      <section class="section" id="worksheet">
+        <span class="eyebrow">INTERACTIVE TOOL</span>
+        <h2>Developer Worksheet</h2>
+        <p>Document one physical&ndash;virtual interaction or meaningful iteration using the five-stage reflective workflow.</p>
+        <div class="worksheet-container">
+          <!-- Stage navigation -->
+          <div aria-label="Worksheet stages" class="worksheet-steps">
+            <button class="step active" data-step="0" type="button">1. Details</button>
+            <button class="step" data-step="1" type="button">2. Plan</button>
+            <button class="step" data-step="2" type="button">3. Test</button>
+            <button class="step" data-step="3" type="button">4. Observe</button>
+            <button class="step" data-step="4" type="button">5. Reflect</button>
+            <button class="step" data-step="5" type="button">6. Revise</button>
+          </div>
+          <form id="developer-form">
+            <!-- Project details -->
+            <div class="worksheet-page active" data-page="0">
+              <h3>Project Details</h3>
+              <p>Describe the prototype and interaction being reviewed.</p>
+              <label for="project-name">Project / Prototype</label>
+              <input id="project-name" name="projectName" placeholder="Project name" type="text"/>
+              <label for="interaction">Interaction and intended player action</label>
+              <textarea id="interaction" name="interaction" placeholder="Describe the physical interaction"></textarea>
+              <label for="iteration">Date / Iteration / Tester</label>
+              <input id="iteration" name="iteration" placeholder="e.g. 21 October 2026, Iteration 2" type="text"/>
+              <label for="hardware">Hardware, software and physical props</label>
+              <textarea id="hardware" name="hardware" placeholder="Headset, engine, tracking, physical objects..."></textarea>
+              <h4>Relevant Design Considerations</h4>
+              <p>Select all that apply to this interaction.</p>
+              <div class="consideration-list">
+                <label>
+                  <input name="considerations" type="checkbox" value="1"/>
+                  1 &mdash; Intended action
+                </label>
+                <label>
+                  <input name="considerations" type="checkbox" value="2"/>
+                  2 &mdash; Physical counterpart
+                </label>
+                <label>
+                  <input name="considerations" type="checkbox" value="3"/>
+                  3 &mdash; Correspondence
+                </label>
+                <label>
+                  <input name="considerations" type="checkbox" value="4"/>
+                  4 &mdash; System knowledge
+                </label>
+                <label>
+                  <input name="considerations" type="checkbox" value="5"/>
+                  5 &mdash; Starting arrangement
+                </label>
+                <label>
+                  <input name="considerations" type="checkbox" value="6"/>
+                  6 &mdash; Onboarding
+                </label>
+              </div>
+            </div>
+            <!-- Plan -->
+            <div class="worksheet-page" data-page="1">
+              <h3>1. PLAN &mdash; Describe the intended interaction</h3>
+              <p>Identify the physical contact point, what the player sees, the required alignment and any known constraints.</p>
+              <label for="plan">Intended interaction</label>
+              <textarea id="plan" name="plan" placeholder="What should happen? What physical and virtual objects are involved?" rows="8"></textarea>
+            </div>
+            <!-- Test -->
+            <div class="worksheet-page" data-page="2">
+              <h3>2. TEST &mdash; Make the experiment repeatable</h3>
+              <p>Describe the starting arrangement, test steps, expected behaviour and tracking conditions.</p>
+              <label for="test">Test procedure</label>
+              <textarea id="test" name="test" placeholder="What will you test, and how will you repeat it?" rows="8"></textarea>
+            </div>
+            <!-- Observe -->
+            <div class="worksheet-page" data-page="3">
+              <h3>3. OBSERVE &mdash; Record what happened</h3>
+              <p>Separate observations from interpretations. Record successes, mismatches, tracking loss and evidence.</p>
+              <label for="observe">Observations</label>
+              <textarea id="observe" name="observe" placeholder="What actually happened during the test?" rows="8"></textarea>
+            </div>
+            <!-- Reflect -->
+            <div class="worksheet-page" data-page="4">
+              <h3>4. REFLECT &mdash; Explain the design issue</h3>
+              <p>Consider the physical object, virtual representation, system knowledge, starting arrangement and onboarding.</p>
+              <label for="reflect">Design reflection</label>
+              <textarea id="reflect" name="reflect" placeholder="What might explain the result? What remains uncertain?" rows="8"></textarea>
+            </div>
+            <!-- Revise -->
+            <div class="worksheet-page" data-page="5">
+              <h3>5. REVISE &mdash; Decide what to change next</h3>
+              <p>Identify one practical design change, its rationale, trade-offs and the next test.</p>
+              <label for="revise">Proposed revision</label>
+              <textarea id="revise" name="revise" placeholder="What will you change and test next?" rows="8"></textarea>
+              <label for="evidence">Evidence references</label>
+              <textarea id="evidence" name="evidence" placeholder="Screenshots, recordings, journal entries or code references"></textarea>
+              <label for="untested">What remains untested?</label>
+              <textarea id="untested" name="untested"></textarea>
+              <label for="next-iteration">Next iteration / date</label>
+              <input id="next-iteration" name="nextIteration" type="text"/>
+            </div>
+            <!-- Worksheet navigation -->
+            <div class="worksheet-controls">
+              <button class="button secondary" id="previous-step" type="button">&larr; Previous</button>
+              <span aria-live="polite" id="step-indicator">Step 1 of 6</span>
+              <button class="button primary" id="next-step" type="button">Next &rarr;</button>
+            </div>
+            <!-- Worksheet file actions -->
+            <div class="worksheet-actions">
+              <div class="save-status">
+                <span aria-live="polite" id="save-indicator" role="status">Ready to save</span>
+              </div>
+              <div class="action-buttons">
+                <button class="button primary" id="export-worksheet" type="button">&darr; Export Worksheet</button>
+                <button class="button secondary" id="reset-worksheet" type="button">+ New Worksheet</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="section case-study" id="case-study">
+        <span class="eyebrow">DOCUMENT 02 &mdash; COMPLETED EXAMPLE</span>
+        <h2>Case Study: Hands-on-Table Calibration</h2>
+        <p>A documented revision from virtual fake-hand targets to physical tabletop contact in the original Honours prototype.</p>
+        <div class="case-study-meta">
+          <div>
+            <span>PROJECT</span>
+            <strong>Tangible Interaction Honours Prototype</strong>
+          </div>
+          <div>
+            <span>HARDWARE</span>
+            <strong>Meta Quest 3</strong>
+          </div>
+          <div>
+            <span>INTERACTION</span>
+            <strong>Physical&ndash;Virtual Tabletop Alignment</strong>
+          </div>
+          <div>
+            <span>TRACKING</span>
+            <strong>Tracked Hands / Untracked Props</strong>
+          </div>
+        </div>
+        <div class="case-study-highlight">
+          <span class="eyebrow">DESIGN PROBLEM</span>
+          <h3>Technical detection does not guarantee meaningful physical correspondence.</h3>
+          <p>The initial calibration approach used virtual fake-hand targets. Although this provided a detectable hand-position condition, the targets were not anchored to the physical tabletop.</p>
+          <p>The procedure was revised to use direct physical contact with the tabletop as the calibration action.</p>
+        </div>
+        <h3 class="case-study-subheading">Development Process</h3>
+        <p>Expand each stage to examine the design decisions documented during development.</p>
+        <div class="case-study-stages">
+          <details class="case-stage" open="">
+            <summary>
+              <span class="case-number">01</span>
+              <span>PLAN &mdash; Intended Interaction</span>
+              <span aria-hidden="true" class="case-chevron">⌄</span>
+            </summary>
+            <div class="case-stage-content">
+              <p>Before the player begins grasping or placing virtual representations of real objects, the virtual scene must relate meaningfully to the physical tabletop.</p>
+              <p>Calibration should establish a useful spatial reference between the tracked hands and the real surface.</p>
+            </div>
+          </details>
+          <details class="case-stage">
+            <summary>
+              <span class="case-number">02</span>
+              <span>TEST &mdash; Initial Approach and Revision</span>
+              <span aria-hidden="true" class="case-chevron">⌄</span>
+            </summary>
+            <div class="case-stage-content">
+              <p>The initial approach asked the wearer to align their hands with virtual fake-hand targets, providing a gesture condition the application could detect.</p>
+              <p>During development, this was revised to placing both hands directly on the real tabletop during setup.</p>
+              <p class="case-note">This documents a design change, not a controlled comparison of two methods.</p>
+            </div>
+          </details>
+          <details class="case-stage">
+            <summary>
+              <span class="case-number">03</span>
+              <span>OBSERVE &mdash; Development Findings</span>
+              <span aria-hidden="true" class="case-chevron">⌄</span>
+            </summary>
+            <div class="case-stage-content">
+              <p>The fake-hand targets could satisfy the technical detection condition, but their placement was not anchored to the real tabletop.</p>
+              <p>This could encourage a hand position inconsistent with the physical contact required later in the experience.</p>
+              <p class="case-note">No quantified accuracy comparison or unfamiliar-participant results were recorded.</p>
+            </div>
+          </details>
+          <details class="case-stage">
+            <summary>
+              <span class="case-number">04</span>
+              <span>REFLECT &mdash; Design Interpretation</span>
+              <span aria-hidden="true" class="case-chevron">⌄</span>
+            </summary>
+            <div class="case-stage-content">
+              <p>The problem was not simply whether hand tracking recognised a gesture.</p>
+              <p>The calibration action needed to establish a meaningful relationship between the wearer's body, the physical table and the virtual representation.</p>
+              <p>Direct tabletop contact provided a tangible reference that connected intended action, spatial correspondence and onboarding.</p>
+            </div>
+          </details>
+          <details class="case-stage">
+            <summary>
+              <span class="case-number">05</span>
+              <span>REVISE &mdash; Design Response</span>
+              <span aria-hidden="true" class="case-chevron">⌄</span>
+            </summary>
+            <div class="case-stage-content">
+              <p>The resulting approach used hands-on-table calibration rather than abstract virtual hand targets.</p>
+              <p>A controlled tabletop layout provided repeatable starting positions for untracked physical props.</p>
+              <p>Passthrough instructions helped the wearer locate the real objects before the virtual scene was revealed.</p>
+              <p class="case-note">Further testing would be required to establish suitability for unfamiliar users.</p>
+            </div>
+          </details>
+        </div>
+        <div class="case-study-takeaways">
+          <h3>What Developers Can Learn</h3>
+          <ul>
+            <li>Define the intended physical action first.</li>
+            <li>Check that technical success corresponds with meaningful real-world contact.</li>
+            <li>Distinguish tracked information from assumptions about untracked objects.</li>
+            <li>Use repeatable starting arrangements when continuous prop tracking is unavailable.</li>
+            <li>Treat onboarding and calibration as part of interaction design.</li>
+          </ul>
+        </div>
+        <div class="case-study-limitations">
+          <h3>Evidence and Limitations</h3>
+          <p>This example is based on one developer's iterative practice in the original Honours prototype. It is not an independent participant study or controlled experiment.</p>
+          <p>The example does not establish improved accuracy, comfort, immersion or usability for other players.</p>
+        </div>
+        <div class="case-study-next">
+          <h3>Apply This to Your Project</h3>
+          <p>Consider what your player physically touches, what the virtual scene promises, and what your hardware can actually detect.</p>
+          <a class="button primary" href="#worksheet">Open Developer Worksheet &rarr;</a>
+        </div>
+      </section>
+      <section class="section replication-guide" id="replication">
+        <span class="eyebrow">DOCUMENT 03 &mdash; ORIGINAL HONOURS ARTEFACT</span>
+        <h2>Physical Setup and Replication Guide</h2>
+        <p>This guide describes the original Honours prototype's controlled tabletop arrangement and the information needed to attempt a comparable setup. It is a replication companion, not a verified plug-and-play reproduction package.</p>
+        <div class="replication-notice">
+          <strong>Scope of this guide</strong>
+          <p>
+            The original physical props were
+            <strong>not continuously tracked</strong>. Their correspondence with virtual representations relied on a repeatable starting arrangement, tracked hands, passthrough onboarding and hands-on-table calibration. Later QR-tracking experiments and the conference demonstration are outside this guide's scope.
+          </p>
+        </div>
+        <h3 class="replication-heading">Required Equipment</h3>
+        <div class="replication-table-wrap">
+          <table class="replication-table">
+            <thead>
+              <tr>
+                <th scope="col">Component</th>
+                <th scope="col">Role in the experience</th>
+                <th scope="col">Before attempting replication</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Meta Quest 3 / tracked hands</td>
+                <td>Tracks the wearer's hands and supports VR interaction</td>
+                <td>Check headset setup, permissions and hand visibility</td>
+              </tr>
+              <tr>
+                <td>Unreal Engine project / interaction plugins</td>
+                <td>Runs the original VR implementation</td>
+                <td>Confirm exact engine and plugin versions from the archive</td>
+              </tr>
+              <tr>
+                <td>Real tabletop</td>
+                <td>Stable physical contact and calibration surface</td>
+                <td>Record height, usable area and safe reach</td>
+              </tr>
+              <tr>
+                <td>Marked cloth or equivalent</td>
+                <td>Repeatable starting positions</td>
+                <td>Record marker spacing and placement</td>
+              </tr>
+              <tr>
+                <td>Physical cubes</td>
+                <td>Graspable contact surfaces for virtual counterparts</td>
+                <td>Verify original dimensions, weight and handling properties</td>
+              </tr>
+              <tr>
+                <td>Physical chest / box</td>
+                <td>Contact, containment and lid interaction</td>
+                <td>Measure exterior, interior and lid motion</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="replication-note">
+          <h3>Original Objects and Substitutes</h3>
+          <p>The original props were sourced from everyday retail and craft suppliers, including Big W and Kaisercraft. Matching a brand or appearance does not establish equivalence. Record any substitutions and evaluate whether they preserve the dimensions, contact surfaces and handling properties required by the intended action.</p>
+        </div>
+        <h3 class="replication-heading">Physical and Virtual Measurement Specifications</h3>
+        <p>Unreal Engine's default distance unit is centimetres. The table separates documented setup features from measurements that still need verification against the original props and archived project.</p>
+        <div class="replication-table-wrap">
+          <table class="replication-table">
+            <thead>
+              <tr>
+                <th scope="col">Component</th>
+                <th scope="col">Physical specification</th>
+                <th scope="col">Virtual specification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Wooden cubes</td>
+                <td>
+                  Kaisercraft 35 &times; 35 &times; 35 mm cubes documented for the
+                  <em>later QR demonstration</em>; original Honours dimensions unverified
+                </td>
+                <td>3.5 &times; 3.5 &times; 3.5 cm is the intended 1:1 equivalent for those later cubes; original virtual mesh dimensions unverified</td>
+              </tr>
+              <tr>
+                <td>Chest / box</td>
+                <td>Retail/craft box; exterior, interior and lid dimensions not recorded</td>
+                <td>Virtual counterpart with interior and lid interaction; dimensions not recorded</td>
+              </tr>
+              <tr>
+                <td>Chest lid</td>
+                <td>Original opening range not measured</td>
+                <td>Interactive virtual lid; rotation limits unverified</td>
+              </tr>
+              <tr>
+                <td>Table</td>
+                <td>Stable tabletop; height and usable area not recorded</td>
+                <td>Virtual tabletop aligned through hand-based calibration</td>
+              </tr>
+              <tr>
+                <td>Marked cloth</td>
+                <td>Hand and prop starting positions marked; spacing not recorded</td>
+                <td>Corresponding virtual placement arrangement</td>
+              </tr>
+              <tr>
+                <td>Hand calibration area</td>
+                <td>Both hands placed on designated tabletop areas</td>
+                <td>Hand detection/calibration volumes; dimensions not recorded</td>
+              </tr>
+              <tr>
+                <td>Hand tracking</td>
+                <td>Meta Quest 3 tracked hands</td>
+                <td>Tracked virtual hand representations</td>
+              </tr>
+              <tr>
+                <td>Physical&ndash;virtual scale</td>
+                <td>Real-world dimensions measured in mm or cm</td>
+                <td>Unreal Engine default: 1 unit = 1 cm</td>
+              </tr>
+              <tr>
+                <td>Object positions</td>
+                <td>Props begin at repeatable starting positions</td>
+                <td>Virtual placement established relative to calibrated tabletop</td>
+              </tr>
+              <tr>
+                <td>Prop tracking</td>
+                <td>Original physical props not continuously tracked</td>
+                <td>Interaction relies on tracked hands and initial arrangement</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="replication-small">
+          <strong>Still to confirm:</strong>
+          original cube dimensions; chest exterior, interior and lid range; table height and cloth marker spacing; virtual mesh and collision dimensions; starting offsets; archived engine/plugin versions; verified project and evidence links.
+        </p>
+        <h3 class="replication-heading">Suggested Replication Procedure</h3>
+        <ol class="replication-steps">
+          <li>
+            <strong>Prepare the physical area.</strong>
+            <p>Choose a stable table with clear reach and enough space. Remove unrelated objects and obstacles, and avoid unexpected collision hazards.</p>
+          </li>
+          <li>
+            <strong>Measure and mark the layout.</strong>
+            <p>Record chest, cube and hand-placement positions using a consistent physical and virtual coordinate reference.</p>
+          </li>
+          <li>
+            <strong>Check the software environment.</strong>
+            <p>Open the archived project with a verified compatible engine and plugin configuration. Confirm hand tracking works before testing prop correspondence.</p>
+          </li>
+          <li>
+            <strong>Begin with physical-world onboarding.</strong>
+            <p>Use the intended passthrough and instructions so the wearer can locate the real table and props before the virtual scene appears.</p>
+          </li>
+          <li>
+            <strong>Perform hands-on-table calibration.</strong>
+            <p>Have the wearer complete the physical tabletop contact action. Check that the virtual table appears in the intended relationship to the real surface.</p>
+          </li>
+          <li>
+            <strong>Test each intended action.</strong>
+            <p>Check contact points while reaching, grasping, placing and interacting with the chest. Record mismatch, drift or tracking loss.</p>
+          </li>
+          <li>
+            <strong>Document and revise.</strong>
+            <p>Complete the developer worksheet and record measurements, setup conditions, observations and substitutions.</p>
+          </li>
+        </ol>
+        <div class="replication-note">
+          <h3>What Replication Can and Cannot Establish</h3>
+          <p>A successful local recreation can demonstrate that an interaction runs under documented conditions and that physical contact is plausible in that setup. It does not establish general usability, improved immersion or suitability for other rooms, props or players. Report differences rather than treating substituted setups as equivalent.</p>
+        </div>
+        <div class="replication-note">
+          <h3>Evidence and Archive References</h3>
+          <p>The original project repository, demonstration recording, reflective journal and Honours evidence archive are linked in the Research Resources section. The journal and evidence web copies are stored with this website.</p>
+          <p class="replication-small">Publication status: editable replication companion with outstanding measurements, software configuration and evidence verification.</p>
+        </div>
+        <div class="case-study-next">
+          <h3>Document Your Own Setup</h3>
+          <p>Use the interactive worksheet to record your physical arrangement, calibration behaviour, observed correspondence and next design iteration.</p>
+          <a class="button primary" href="#worksheet">Open Developer Worksheet &rarr;</a>
+        </div>
+      </section>
+      <footer>
+        <p>Physical&ndash;Virtual Correspondence | Honours Research Appendix</p>
+      </footer>
+    </main>
+  </body>
 </html>

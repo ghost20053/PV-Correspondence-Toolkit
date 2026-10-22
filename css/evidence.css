@@ -1,0 +1,29 @@
+[hidden] { display: none !important; }
+
+.hero .panel { margin-top: 30px; }
+.archive-controls { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px; margin-top: 28px; }
+.archive-controls label { display: block; margin-bottom: 8px; font-weight: 600; }
+.archive-controls input, .archive-controls select {
+  width: 100%; min-width: 0; padding: 12px; font: inherit; color: var(--text);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+}
+.evidence-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.evidence-card { min-width: 0; padding: 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
+.evidence-card img { width: 100%; height: 150px; object-fit: contain; background: var(--background); }
+.evidence-card h3 { font-size: 17px; line-height: 1.5; overflow-wrap: anywhere; }
+.evidence-filename { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+.evidence-card .button, .archive-pagination .button, .viewer-heading .button { font: inherit; cursor: pointer; background: var(--surface); }
+.archive-pagination .primary { background: var(--accent); }
+.archive-pagination { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+.archive-pagination button:disabled { opacity: .5; cursor: not-allowed; }
+#evidence-viewer { width: min(1100px, 94vw); max-height: 92vh; overflow: auto; color: var(--text); background: var(--background); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+#evidence-viewer::backdrop { background: rgb(0 0 0 / 80%); }
+.viewer-heading { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
+.viewer-heading h2 { font-size: 18px; overflow-wrap: anywhere; margin-top: 0; }
+#viewer-media img, #viewer-media video { display: block; width: 100%; max-height: 65vh; object-fit: contain; background: #000; }
+#viewer-original { color: var(--accent); }
+@media (max-width: 1100px) {
+  .archive-controls { grid-template-columns: 1fr; }
+  .evidence-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 750px) { .evidence-grid { grid-template-columns: 1fr; } }
