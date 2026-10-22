@@ -41,21 +41,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const link = document.createElement("a");
     link.href = "#" + anchor;
     link.textContent = heading.textContent;
+    link.dataset.section = anchor;
     outline.append(link);
   });
   if (outline.querySelector("a")) document.body.append(outline);
   const correspondence = document.createElement("aside");
   correspondence.className = "correspondence-note";
   correspondence.setAttribute("aria-label", "Physical and virtual correspondence illustration");
+  const illustrations = {
+    "research.html": ["RESEARCH / CONTRIBUTION", "research-diagram.svg", "Four findings", "Four points connected to six design considerations.", "Six considerations", "Documented practice informs reflective design questions.", "#findings", "Read the research findings"],
+    "evidence.html": ["PRACTICE / EVIDENCE", "evidence-diagram.svg", "Development record", "Three connected document panels representing the three research cycles.", "Three research cycles", "Trace the decisions through the journal and original evidence.", "#evidence-guide", "Explore the evidence guide"],
+    "prototype.html": ["OBJECTS / ARRANGEMENT", "setup-diagram.svg", "Physical tabletop", "An illustrative tabletop with two cubes and a chest, without measurements.", "A controlled starting layout", "Physical props establish the starting arrangement for interaction.", "#replication", "Read the setup guide"],
+    "toolkit.html": ["QUESTIONS / REFLECTION", "toolkit-diagram.svg", "Six design considerations", "Six numbered prompts arranged on a worksheet.", "One interaction at a time", "Document the action, observations and next design revision.", "#worksheet", "Use the developer worksheet"]
+  };
+  const illustration = illustrations[window.location.pathname.split("/").pop()] || ["PHYSICAL / VIRTUAL", "correspondence-diagram.svg", "Physical object", "A solid cube paired with a wireframe representation of the same form.", "Virtual representation", "A shared form. A physical action. What needs to correspond?", "toolkit.html#principles", "Explore the six considerations"];
   correspondence.innerHTML = `
-    <p class="margin-label">PHYSICAL / VIRTUAL</p>
+    <p class="margin-label">${illustration[0]}</p>
     <figure>
-      <span class="diagram-label">Physical object</span>
-      <img src="assets/correspondence-diagram.svg" alt="A solid cube paired with a wireframe representation of the same form." width="200" height="300">
-      <span class="diagram-label">Virtual representation</span>
-      <figcaption>A shared form. A physical action.<br>What needs to correspond?</figcaption>
+      <span class="diagram-label">${illustration[2]}</span>
+      <img src="assets/${illustration[1]}" alt="${illustration[3]}" width="200" height="300">
+      <span class="diagram-label">${illustration[4]}</span>
+      <figcaption>${illustration[5]}</figcaption>
     </figure>
-    <a href="toolkit.html#principles">Explore the six considerations →</a>
+    <a href="${illustration[6]}">${illustration[7]} →</a>
     <small>Conceptual illustration</small>`;
   document.body.append(correspondence);
   function closeMenu() {
@@ -82,6 +90,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = links.map(link => document.querySelector(link.getAttribute("href")));
   let scheduled = false;
   function updateLocation() {
+    let currentSection = null;
+    outline.querySelectorAll("a").forEach(function (link) {
+      const target = document.getElementById(link.dataset.section);
+      if (target && target.getBoundingClientRect().top <= header.getBoundingClientRect().height + 100) currentSection = link;
+    });
+    outline.querySelectorAll("a").forEach(function (link) {
+      if (link === currentSection) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
     let active = 0;
     sections.forEach(function (section, index) {
       if (section && section.getBoundingClientRect().top <= 140) active = index;
