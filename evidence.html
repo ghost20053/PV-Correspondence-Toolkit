@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reflective Journal and Evidence | Physical–Virtual Correspondence</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/navigation.js"></script>
     <link rel="stylesheet" href="css/evidence.css">
     <script defer src="js/evidence-data.js"></script>
     <script defer src="js/evidence.js"></script>
   </head>
   <body>
-    <aside class="sidebar">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
       <div class="logo">
         <span class="logo-icon">PV</span>
         <div>
@@ -18,23 +20,18 @@
           <small>Research Appendix</small>
         </div>
       </div>
-      <nav aria-label="Main navigation">
-        <p class="nav-label">GET STARTED</p>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" hidden>Explore this appendix <span aria-hidden="true">+</span></button>
+      <nav id="main-navigation" aria-label="Main navigation">
+        <p class="nav-label">EXPLORE THE APPENDIX</p>
         <a href="index.html#home">Overview</a>
-        <p class="nav-label">RESEARCH</p>
-        <a href="index.html#resources">Research Resources</a>
-        <a href="#journal">Reflective Journal</a>
-        <a href="#archive">Evidence Archive</a>
-        <a href="index.html#demonstration">Final Demonstration</a>
-        <p class="nav-label">TOOLKIT</p>
-        <a href="index.html#principles">Design Considerations</a>
-        <a href="index.html#worksheet">Developer Worksheet</a>
-        <a href="index.html#case-study">Completed Example</a>
-        <a href="index.html#replication">Replication Guide</a>
+        <a href="research.html#resources">Research &amp; Demonstration</a>
+        <a href="#journal" aria-current="page">Journal &amp; Evidence</a>
+        <a href="prototype.html#download">Prototype &amp; Setup</a>
+        <a href="toolkit.html#principles">Developer Toolkit</a>
       </nav>
-    </aside>
+    </header>
 
-    <main class="content">
+    <main class="content" id="main-content" tabindex="-1">
       <section class="hero" id="journal">
         <span class="eyebrow">HONOURS RESEARCH APPENDIX · DEVELOPMENT RECORD</span>
         <h1>Reflective Journal <span>and Evidence</span></h1>
@@ -621,9 +618,9 @@
       <section class="section">
         <h2>Apply the Research</h2>
         <p>Continue to the six design considerations and the interactive developer worksheet.</p>
-        <a class="button primary" href="index.html#principles">Explore Design Considerations &rarr;</a>
+        <a class="button primary" href="toolkit.html#principles">Explore Design Considerations &rarr;</a>
       </section>
-      <footer><p>Physical–Virtual Correspondence | Honours Research Appendix</p></footer>
+      <footer><p>Physical–Virtual Correspondence | Honours Research Appendix</p><a href="index.html#home">Back to Overview &uarr;</a></footer>
     </main>
     <dialog id="evidence-viewer" aria-labelledby="viewer-title">
       <div class="viewer-heading"><h2 id="viewer-title"></h2><button id="viewer-close" class="button secondary" type="button">Close</button></div>

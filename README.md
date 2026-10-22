@@ -3,6 +3,33 @@ One online research appendix accompanying Honours research into physical–virtu
 correspondence in VR, containing the reflective journal, evidence archive,
 demonstration and developer toolkit.
 
+## Website pages
+
+- `index.html`: self-contained project overview with links to every detailed area.
+- `research.html`: research resources, document downloads and final demonstration.
+- `evidence.html`: reflective journal and searchable evidence archive.
+- `prototype.html`: Windows download and physical setup / replication guide.
+- `toolkit.html`: design considerations, interactive worksheet and completed example.
+
+Publish all five HTML pages with the shared CSS, JavaScript and assets.
+Old index section bookmarks redirect to their new pages when JavaScript is enabled.
+The worksheet retains its existing browser-storage key.
+
+## Playable prototype download
+
+The original Windows build is published as release `honours-prototype-v1.0.0`:
+https://github.com/ghost20053/PV-Correspondence-Toolkit/releases/tag/honours-prototype-v1.0.0
+
+`prototype.html#download` links directly to its ZIP and checksum. The archive is
+553,683,016 bytes (528 MiB). GitHub's uploaded asset digest matches the local ZIP:
+`66da2706a6406699d95b704234e6861a31ec0043dda80207c99952258165c14d`.
+
+Keep the binary outside Git history and GitHub Pages assets. The version-specific
+release URL preserves the appendix's reference to this artefact.
+The ZIP retains the Windows directory, excluding generated logs and crash reports.
+Original build files remain unchanged. Packaged VR behaviour and runtime requirements
+still need external testing; file verification does not validate VR interaction.
+
 ## Demonstration video
 
 The website plays `assets/videos/final-demonstration.mp4` using the browser's

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Prototype & Setup | Honours Research Appendix</title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script defer src="js/navigation.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <!-- Shared website navigation -->
+    <header class="site-header">
+      <div class="logo">
+        <span class="logo-icon">PV</span>
+        <div>
+          <strong>Correspondence</strong>
+          <small>Research Appendix</small>
+        </div>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" hidden>Explore this appendix <span aria-hidden="true">+</span></button>
+      <nav id="main-navigation" aria-label="Main navigation">
+        <p class="nav-label">EXPLORE THE APPENDIX</p>
+        <a href="index.html#home">Overview</a>
+        <a href="research.html#resources">Research &amp; Demonstration</a>
+        <a href="evidence.html#journal">Journal &amp; Evidence</a>
+        <a href="#download" aria-current="page">Prototype &amp; Setup</a>
+        <a href="toolkit.html#principles">Developer Toolkit</a>
+      </nav>
+    </header>
+    <!-- Main content -->
+    <main class="content" id="main-content" tabindex="-1">
+<section class="hero page-intro"><span class="eyebrow">ORIGINAL HONOURS ARTEFACT</span><h1>Prototype &amp; Setup</h1><p>Get the Windows prototype and understand the physical arrangement behind the experience.</p></section>
+<section class="section" id="download" aria-labelledby="download-heading">
+        <span class="eyebrow">PLAYABLE RESEARCH ARTEFACT</span>
+        <h2 id="download-heading">Download the Original Honours Prototype</h2>
+        <p>Experience the prototype discussed in the exegesis. This Windows build preserves the original Honours artefact; later QR-tracking experiments are outside its scope.</p>
+        <div class="resource-notice">
+          <h3>Windows PC &middot; VR prototype</h3>
+          <p>Original Honours prototype &middot; Version 1.0.0 &middot; Windows ZIP &middot; 528 MiB</p>
+          <div class="actions"><a class="button primary" href="https://github.com/ghost20053/PV-Correspondence-Toolkit/releases/download/honours-prototype-v1.0.0/PV-Correspondence-Honours-Windows.zip">Download Windows Build &darr;</a>
+          <a class="button secondary" href="https://github.com/ghost20053/PV-Correspondence-Toolkit/releases/tag/honours-prototype-v1.0.0">Release Notes &nearr;</a></div>
+          <p><a href="https://github.com/ghost20053/PV-Correspondence-Toolkit/releases/download/honours-prototype-v1.0.0/PV-Correspondence-Honours-Windows.zip.sha256">Download SHA-256 checksum</a></p>
+          <p>This is a Windows application, not a standalone Quest installation. The research setup uses a Meta Quest 3, tracked hands and physical tabletop props. Read the setup guide before attempting the experience.</p>
+          <a class="button secondary" href="#replication">Read the Setup Guide &rarr;</a>
+        </div>
+        <h3>Running the Download</h3>
+        <ol class="replication-steps">
+          <li>Download the Windows ZIP and extract the entire archive.</li>
+          <li>Keep the <code>Windows</code> folder and its contents together, including the <code>Engine</code> and <code>MetaTest</code> folders.</li>
+          <li>Prepare the headset, tracked hands and physical arrangement described in the replication guide.</li>
+          <li>Open <code>Windows/MetaTest.exe</code> on your Windows PC.</li>
+        </ol>
+        <p>Headset connection and runtime requirements for this packaged build still need verification. The demonstration video provides a way to review the experience without running it.</p>
+        <a href="research.html#demonstration">Watch the Final Demonstration &rarr;</a>
+      </section><section class="section replication-guide" id="replication">
+        <span class="eyebrow">DOCUMENT 03 &mdash; ORIGINAL HONOURS ARTEFACT</span>
+        <h2>Physical Setup and Replication Guide</h2>
+        <p>This guide describes the original Honours prototype's controlled tabletop arrangement and the information needed to attempt a comparable setup. It is a replication companion, not a verified plug-and-play reproduction package.</p>
+        <div class="replication-notice">
+          <strong>Scope of this guide</strong>
+          <p>
+            The original physical props were
+            <strong>not continuously tracked</strong>. Their correspondence with virtual representations relied on a repeatable starting arrangement, tracked hands, passthrough onboarding and hands-on-table calibration. Later QR-tracking experiments and the conference demonstration are outside this guide's scope.
+          </p>
+        </div>
+        <h3 class="replication-heading">Required Equipment</h3>
+        <div class="replication-table-wrap">
+          <table class="replication-table">
+            <thead>
+              <tr>
+                <th scope="col">Component</th>
+                <th scope="col">Role in the experience</th>
+                <th scope="col">Before attempting replication</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Meta Quest 3 / tracked hands</td>
+                <td>Tracks the wearer's hands and supports VR interaction</td>
+                <td>Check headset setup, permissions and hand visibility</td>
+              </tr>
+              <tr>
+                <td>Unreal Engine project / interaction plugins</td>
+                <td>Runs the original VR implementation</td>
+                <td>Confirm exact engine and plugin versions from the archive</td>
+              </tr>
+              <tr>
+                <td>Real tabletop</td>
+                <td>Stable physical contact and calibration surface</td>
+                <td>Record height, usable area and safe reach</td>
+              </tr>
+              <tr>
+                <td>Marked cloth or equivalent</td>
+                <td>Repeatable starting positions</td>
+                <td>Record marker spacing and placement</td>
+              </tr>
+              <tr>
+                <td>Physical cubes</td>
+                <td>Graspable contact surfaces for virtual counterparts</td>
+                <td>Verify original dimensions, weight and handling properties</td>
+              </tr>
+              <tr>
+                <td>Physical chest / box</td>
+                <td>Contact, containment and lid interaction</td>
+                <td>Measure exterior, interior and lid motion</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="replication-note">
+          <h3>Original Objects and Substitutes</h3>
+          <p>The original props were sourced from everyday retail and craft suppliers, including Big W and Kaisercraft. Matching a brand or appearance does not establish equivalence. Record any substitutions and evaluate whether they preserve the dimensions, contact surfaces and handling properties required by the intended action.</p>
+        </div>
+        <h3 class="replication-heading">Physical and Virtual Measurement Specifications</h3>
+        <p>Unreal Engine's default distance unit is centimetres. The table separates documented setup features from measurements that still need verification against the original props and archived project.</p>
+        <div class="replication-table-wrap">
+          <table class="replication-table">
+            <thead>
+              <tr>
+                <th scope="col">Component</th>
+                <th scope="col">Physical specification</th>
+                <th scope="col">Virtual specification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Wooden cubes</td>
+                <td>
+                  Kaisercraft 35 &times; 35 &times; 35 mm cubes documented for the
+                  <em>later QR demonstration</em>; original Honours dimensions unverified
+                </td>
+                <td>3.5 &times; 3.5 &times; 3.5 cm is the intended 1:1 equivalent for those later cubes; original virtual mesh dimensions unverified</td>
+              </tr>
+              <tr>
+                <td>Chest / box</td>
+                <td>Retail/craft box; exterior, interior and lid dimensions not recorded</td>
+                <td>Virtual counterpart with interior and lid interaction; dimensions not recorded</td>
+              </tr>
+              <tr>
+                <td>Chest lid</td>
+                <td>Original opening range not measured</td>
+                <td>Interactive virtual lid; rotation limits unverified</td>
+              </tr>
+              <tr>
+                <td>Table</td>
+                <td>Stable tabletop; height and usable area not recorded</td>
+                <td>Virtual tabletop aligned through hand-based calibration</td>
+              </tr>
+              <tr>
+                <td>Marked cloth</td>
+                <td>Hand and prop starting positions marked; spacing not recorded</td>
+                <td>Corresponding virtual placement arrangement</td>
+              </tr>
+              <tr>
+                <td>Hand calibration area</td>
+                <td>Both hands placed on designated tabletop areas</td>
+                <td>Hand detection/calibration volumes; dimensions not recorded</td>
+              </tr>
+              <tr>
+                <td>Hand tracking</td>
+                <td>Meta Quest 3 tracked hands</td>
+                <td>Tracked virtual hand representations</td>
+              </tr>
+              <tr>
+                <td>Physical&ndash;virtual scale</td>
+                <td>Real-world dimensions measured in mm or cm</td>
+                <td>Unreal Engine default: 1 unit = 1 cm</td>
+              </tr>
+              <tr>
+                <td>Object positions</td>
+                <td>Props begin at repeatable starting positions</td>
+                <td>Virtual placement established relative to calibrated tabletop</td>
+              </tr>
+              <tr>
+                <td>Prop tracking</td>
+                <td>Original physical props not continuously tracked</td>
+                <td>Interaction relies on tracked hands and initial arrangement</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="replication-small">
+          <strong>Still to confirm:</strong>
+          original cube dimensions; chest exterior, interior and lid range; table height and cloth marker spacing; virtual mesh and collision dimensions; starting offsets; archived engine/plugin versions; verified project and evidence links.
+        </p>
+        <h3 class="replication-heading">Suggested Replication Procedure</h3>
+        <ol class="replication-steps">
+          <li>
+            <strong>Prepare the physical area.</strong>
+            <p>Choose a stable table with clear reach and enough space. Remove unrelated objects and obstacles, and avoid unexpected collision hazards.</p>
+          </li>
+          <li>
+            <strong>Measure and mark the layout.</strong>
+            <p>Record chest, cube and hand-placement positions using a consistent physical and virtual coordinate reference.</p>
+          </li>
+          <li>
+            <strong>Check the software environment.</strong>
+            <p>Open the archived project with a verified compatible engine and plugin configuration. Confirm hand tracking works before testing prop correspondence.</p>
+          </li>
+          <li>
+            <strong>Begin with physical-world onboarding.</strong>
+            <p>Use the intended passthrough and instructions so the wearer can locate the real table and props before the virtual scene appears.</p>
+          </li>
+          <li>
+            <strong>Perform hands-on-table calibration.</strong>
+            <p>Have the wearer complete the physical tabletop contact action. Check that the virtual table appears in the intended relationship to the real surface.</p>
+          </li>
+          <li>
+            <strong>Test each intended action.</strong>
+            <p>Check contact points while reaching, grasping, placing and interacting with the chest. Record mismatch, drift or tracking loss.</p>
+          </li>
+          <li>
+            <strong>Document and revise.</strong>
+            <p>Complete the developer worksheet and record measurements, setup conditions, observations and substitutions.</p>
+          </li>
+        </ol>
+        <div class="replication-note">
+          <h3>What Replication Can and Cannot Establish</h3>
+          <p>A successful local recreation can demonstrate that an interaction runs under documented conditions and that physical contact is plausible in that setup. It does not establish general usability, improved immersion or suitability for other rooms, props or players. Report differences rather than treating substituted setups as equivalent.</p>
+        </div>
+        <div class="replication-note">
+          <h3>Evidence and Archive References</h3>
+          <p>The original project repository, demonstration recording, reflective journal and Honours evidence archive are linked in the Research Resources section. The journal and evidence web copies are stored with this website.</p>
+          <p class="replication-small">Publication status: editable replication companion with outstanding measurements, software configuration and evidence verification.</p>
+        </div>
+        <div class="case-study-next">
+          <h3>Document Your Own Setup</h3>
+          <p>Use the interactive worksheet to record your physical arrangement, calibration behaviour, observed correspondence and next design iteration.</p>
+          <a class="button primary" href="toolkit.html#worksheet">Open Developer Worksheet &rarr;</a>
+        </div>
+      </section>
+      <footer><p>Physical&ndash;Virtual Correspondence | Honours Research Appendix</p><a href="index.html#home">Back to Overview &uarr;</a></footer>
+    </main>
+  </body>
+</html>

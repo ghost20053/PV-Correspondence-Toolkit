@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Developer Toolkit | Honours Research Appendix</title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script defer src="js/navigation.js"></script>
+    <script defer="" src="js/script.js">
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <!-- Shared website navigation -->
+    <header class="site-header">
+      <div class="logo">
+        <span class="logo-icon">PV</span>
+        <div>
+          <strong>Correspondence</strong>
+          <small>Research Appendix</small>
+        </div>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" hidden>Explore this appendix <span aria-hidden="true">+</span></button>
+      <nav id="main-navigation" aria-label="Main navigation">
+        <p class="nav-label">EXPLORE THE APPENDIX</p>
+        <a href="index.html#home">Overview</a>
+        <a href="research.html#resources">Research &amp; Demonstration</a>
+        <a href="evidence.html#journal">Journal &amp; Evidence</a>
+        <a href="prototype.html#download">Prototype &amp; Setup</a>
+        <a href="#principles" aria-current="page">Developer Toolkit</a>
+      </nav>
+    </header>
+    <!-- Main content -->
+    <main class="content" id="main-content" tabindex="-1">
+<section class="hero page-intro"><span class="eyebrow">PRACTICE-DERIVED TOOLS</span><h1>Developer Toolkit</h1><p>Six design considerations, a reflective worksheet and a worked calibration example for examining physical–virtual interaction.</p></section>
+<section class="section" id="principles">
+        <h2>Six Design Considerations</h2>
+        <p>Questions to guide your interaction design.</p>
+        <div class="card-grid">
+          <article class="card">
+            <span>01</span>
+            <h3>Intended Action</h3>
+            <p>What should the player physically do?</p>
+          </article>
+          <article class="card">
+            <span>02</span>
+            <h3>Physical Counterpart</h3>
+            <p>What real object supports the action?</p>
+          </article>
+          <article class="card">
+            <span>03</span>
+            <h3>Correspondence</h3>
+            <p>What positions or movements must align?</p>
+          </article>
+          <article class="card">
+            <span>04</span>
+            <h3>System Knowledge</h3>
+            <p>What does the application actually track?</p>
+          </article>
+          <article class="card">
+            <span>05</span>
+            <h3>Starting Arrangement</h3>
+            <p>Where must objects and hands begin?</p>
+          </article>
+          <article class="card">
+            <span>06</span>
+            <h3>Onboarding</h3>
+            <p>How does the player locate and calibrate?</p>
+          </article>
+        </div>
+      </section><section class="section" id="worksheet">
+        <span class="eyebrow">INTERACTIVE TOOL</span>
+        <h2>Developer Worksheet</h2>
+        <p>Document one physical&ndash;virtual interaction or meaningful iteration using the five-stage reflective workflow.</p>
+        <div class="worksheet-container">
+          <!-- Stage navigation -->
+          <div aria-label="Worksheet stages" class="worksheet-steps">
+            <button class="step active" data-step="0" type="button">1. Details</button>
+            <button class="step" data-step="1" type="button">2. Plan</button>
+            <button class="step" data-step="2" type="button">3. Test</button>
+            <button class="step" data-step="3" type="button">4. Observe</button>
+            <button class="step" data-step="4" type="button">5. Reflect</button>
+            <button class="step" data-step="5" type="button">6. Revise</button>
+          </div>
+          <form id="developer-form">
+            <!-- Project details -->
+            <div class="worksheet-page active" data-page="0">
+              <h3>Project Details</h3>
+              <p>Describe the prototype and interaction being reviewed.</p>
+              <label for="project-name">Project / Prototype</label>
+              <input id="project-name" name="projectName" placeholder="Project name" type="text"/>
+              <label for="interaction">Interaction and intended player action</label>
+              <textarea id="interaction" name="interaction" placeholder="Describe the physical interaction"></textarea>
+              <label for="iteration">Date / Iteration / Tester</label>
+              <input id="iteration" name="iteration" placeholder="e.g. 21 October 2026, Iteration 2" type="text"/>
+              <label for="hardware">Hardware, software and physical props</label>
+              <textarea id="hardware" name="hardware" placeholder="Headset, engine, tracking, physical objects..."></textarea>
+              <h4>Relevant Design Considerations</h4>
+              <p>Select all that apply to this interaction.</p>
+              <div class="consideration-list">
+                <label>
+                  <input name="considerations" type="checkbox" value="1"/>
+                  1 &mdash; Intended action
+                </label>
+                <label>
+                  <input name="considerations" type="checkbox" value="2"/>
+                  2 &mdash; Physical counterpart
+                </label>
+                <label>
+                  <input name="considerations" type="checkbox" value="3"/>
+                  3 &mdash; Correspondence
+                </label>
+                <label>
+                  <input name="considerations" type="checkbox" value="4"/>
+                  4 &mdash; System knowledge
+                </label>
+                <label>
+                  <input name="considerations" type="checkbox" value="5"/>
+                  5 &mdash; Starting arrangement
+                </label>
+                <label>
+                  <input name="considerations" type="checkbox" value="6"/>
+                  6 &mdash; Onboarding
+                </label>
+              </div>
+            </div>
+            <!-- Plan -->
+            <div class="worksheet-page" data-page="1">
+              <h3>1. PLAN &mdash; Describe the intended interaction</h3>
+              <p>Identify the physical contact point, what the player sees, the required alignment and any known constraints.</p>
+              <label for="plan">Intended interaction</label>
+              <textarea id="plan" name="plan" placeholder="What should happen? What physical and virtual objects are involved?" rows="8"></textarea>
+            </div>
+            <!-- Test -->
+            <div class="worksheet-page" data-page="2">
+              <h3>2. TEST &mdash; Make the experiment repeatable</h3>
+              <p>Describe the starting arrangement, test steps, expected behaviour and tracking conditions.</p>
+              <label for="test">Test procedure</label>
+              <textarea id="test" name="test" placeholder="What will you test, and how will you repeat it?" rows="8"></textarea>
+            </div>
+            <!-- Observe -->
+            <div class="worksheet-page" data-page="3">
+              <h3>3. OBSERVE &mdash; Record what happened</h3>
+              <p>Separate observations from interpretations. Record successes, mismatches, tracking loss and evidence.</p>
+              <label for="observe">Observations</label>
+              <textarea id="observe" name="observe" placeholder="What actually happened during the test?" rows="8"></textarea>
+            </div>
+            <!-- Reflect -->
+            <div class="worksheet-page" data-page="4">
+              <h3>4. REFLECT &mdash; Explain the design issue</h3>
+              <p>Consider the physical object, virtual representation, system knowledge, starting arrangement and onboarding.</p>
+              <label for="reflect">Design reflection</label>
+              <textarea id="reflect" name="reflect" placeholder="What might explain the result? What remains uncertain?" rows="8"></textarea>
+            </div>
+            <!-- Revise -->
+            <div class="worksheet-page" data-page="5">
+              <h3>5. REVISE &mdash; Decide what to change next</h3>
+              <p>Identify one practical design change, its rationale, trade-offs and the next test.</p>
+              <label for="revise">Proposed revision</label>
+              <textarea id="revise" name="revise" placeholder="What will you change and test next?" rows="8"></textarea>
+              <label for="evidence">Evidence references</label>
+              <textarea id="evidence" name="evidence" placeholder="Screenshots, recordings, journal entries or code references"></textarea>
+              <label for="untested">What remains untested?</label>
+              <textarea id="untested" name="untested"></textarea>
+              <label for="next-iteration">Next iteration / date</label>
+              <input id="next-iteration" name="nextIteration" type="text"/>
+            </div>
+            <!-- Worksheet navigation -->
+            <div class="worksheet-controls">
+              <button class="button secondary" id="previous-step" type="button">&larr; Previous</button>
+              <span aria-live="polite" id="step-indicator">Step 1 of 6</span>
+              <button class="button primary" id="next-step" type="button">Next &rarr;</button>
+            </div>
+            <!-- Worksheet file actions -->
+            <div class="worksheet-actions">
+              <div class="save-status">
+                <span aria-live="polite" id="save-indicator" role="status">Ready to save</span>
+              </div>
+              <div class="action-buttons">
+                <button class="button primary" id="export-worksheet" type="button">&darr; Export Worksheet</button>
+                <button class="button secondary" id="reset-worksheet" type="button">+ New Worksheet</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section><section class="section case-study" id="case-study">
+        <span class="eyebrow">DOCUMENT 02 &mdash; COMPLETED EXAMPLE</span>
+        <h2>Case Study: Hands-on-Table Calibration</h2>
+        <p>A documented revision from virtual fake-hand targets to physical tabletop contact in the original Honours prototype.</p>
+        <div class="case-study-meta">
+          <div>
+            <span>PROJECT</span>
+            <strong>Tangible Interaction Honours Prototype</strong>
+          </div>
+          <div>
+            <span>HARDWARE</span>
+            <strong>Meta Quest 3</strong>
+          </div>
+          <div>
+            <span>INTERACTION</span>
+            <strong>Physical&ndash;Virtual Tabletop Alignment</strong>
+          </div>
+          <div>
+            <span>TRACKING</span>
+            <strong>Tracked Hands / Untracked Props</strong>
+          </div>
+        </div>
+        <div class="case-study-highlight">
+          <span class="eyebrow">DESIGN PROBLEM</span>
+          <h3>Technical detection does not guarantee meaningful physical correspondence.</h3>
+          <p>The initial calibration approach used virtual fake-hand targets. Although this provided a detectable hand-position condition, the targets were not anchored to the physical tabletop.</p>
+          <p>The procedure was revised to use direct physical contact with the tabletop as the calibration action.</p>
+        </div>
+        <h3 class="case-study-subheading">Development Process</h3>
+        <p>Expand each stage to examine the design decisions documented during development.</p>
+        <div class="case-study-stages">
+          <details class="case-stage" open="">
+            <summary>
+              <span class="case-number">01</span>
+              <span>PLAN &mdash; Intended Interaction</span>
+              <span aria-hidden="true" class="case-chevron">⌄</span>
+            </summary>
+            <div class="case-stage-content">
+              <p>Before the player begins grasping or placing virtual representations of real objects, the virtual scene must relate meaningfully to the physical tabletop.</p>
+              <p>Calibration should establish a useful spatial reference between the tracked hands and the real surface.</p>
+            </div>
+          </details>
+          <details class="case-stage">
+            <summary>
+              <span class="case-number">02</span>
+              <span>TEST &mdash; Initial Approach and Revision</span>
+              <span aria-hidden="true" class="case-chevron">⌄</span>
+            </summary>
+            <div class="case-stage-content">
+              <p>The initial approach asked the wearer to align their hands with virtual fake-hand targets, providing a gesture condition the application could detect.</p>
+              <p>During development, this was revised to placing both hands directly on the real tabletop during setup.</p>
+              <p class="case-note">This documents a design change, not a controlled comparison of two methods.</p>
+            </div>
+          </details>
+          <details class="case-stage">
+            <summary>
+              <span class="case-number">03</span>
+              <span>OBSERVE &mdash; Development Findings</span>
+              <span aria-hidden="true" class="case-chevron">⌄</span>
+            </summary>
+            <div class="case-stage-content">
+              <p>The fake-hand targets could satisfy the technical detection condition, but their placement was not anchored to the real tabletop.</p>
+              <p>This could encourage a hand position inconsistent with the physical contact required later in the experience.</p>
+              <p class="case-note">No quantified accuracy comparison or unfamiliar-participant results were recorded.</p>
+            </div>
+          </details>
+          <details class="case-stage">
+            <summary>
+              <span class="case-number">04</span>
+              <span>REFLECT &mdash; Design Interpretation</span>
+              <span aria-hidden="true" class="case-chevron">⌄</span>
+            </summary>
+            <div class="case-stage-content">
+              <p>The problem was not simply whether hand tracking recognised a gesture.</p>
+              <p>The calibration action needed to establish a meaningful relationship between the wearer's body, the physical table and the virtual representation.</p>
+              <p>Direct tabletop contact provided a tangible reference that connected intended action, spatial correspondence and onboarding.</p>
+            </div>
+          </details>
+          <details class="case-stage">
+            <summary>
+              <span class="case-number">05</span>
+              <span>REVISE &mdash; Design Response</span>
+              <span aria-hidden="true" class="case-chevron">⌄</span>
+            </summary>
+            <div class="case-stage-content">
+              <p>The resulting approach used hands-on-table calibration rather than abstract virtual hand targets.</p>
+              <p>A controlled tabletop layout provided repeatable starting positions for untracked physical props.</p>
+              <p>Passthrough instructions helped the wearer locate the real objects before the virtual scene was revealed.</p>
+              <p class="case-note">Further testing would be required to establish suitability for unfamiliar users.</p>
+            </div>
+          </details>
+        </div>
+        <div class="case-study-takeaways">
+          <h3>What Developers Can Learn</h3>
+          <ul>
+            <li>Define the intended physical action first.</li>
+            <li>Check that technical success corresponds with meaningful real-world contact.</li>
+            <li>Distinguish tracked information from assumptions about untracked objects.</li>
+            <li>Use repeatable starting arrangements when continuous prop tracking is unavailable.</li>
+            <li>Treat onboarding and calibration as part of interaction design.</li>
+          </ul>
+        </div>
+        <div class="case-study-limitations">
+          <h3>Evidence and Limitations</h3>
+          <p>This example is based on one developer's iterative practice in the original Honours prototype. It is not an independent participant study or controlled experiment.</p>
+          <p>The example does not establish improved accuracy, comfort, immersion or usability for other players.</p>
+        </div>
+        <div class="case-study-next">
+          <h3>Apply This to Your Project</h3>
+          <p>Consider what your player physically touches, what the virtual scene promises, and what your hardware can actually detect.</p>
+          <a class="button primary" href="#worksheet">Open Developer Worksheet &rarr;</a>
+        </div>
+      </section>
+      <footer><p>Physical&ndash;Virtual Correspondence | Honours Research Appendix</p><a href="index.html#home">Back to Overview &uarr;</a></footer>
+    </main>
+  </body>
+</html>
