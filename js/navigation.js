@@ -44,6 +44,20 @@ document.addEventListener("DOMContentLoaded", function () {
     outline.append(link);
   });
   if (outline.querySelector("a")) document.body.append(outline);
+  const correspondence = document.createElement("aside");
+  correspondence.className = "correspondence-note";
+  correspondence.setAttribute("aria-label", "Physical and virtual correspondence illustration");
+  correspondence.innerHTML = `
+    <p class="margin-label">PHYSICAL / VIRTUAL</p>
+    <figure>
+      <span class="diagram-label">Physical object</span>
+      <img src="assets/correspondence-diagram.svg" alt="A solid cube paired with a wireframe representation of the same form." width="200" height="300">
+      <span class="diagram-label">Virtual representation</span>
+      <figcaption>A shared form. A physical action.<br>What needs to correspond?</figcaption>
+    </figure>
+    <a href="toolkit.html#principles">Explore the six considerations →</a>
+    <small>Conceptual illustration</small>`;
+  document.body.append(correspondence);
   function closeMenu() {
     toggle.setAttribute("aria-expanded", "false");
     header.classList.remove("menu-open");

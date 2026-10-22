@@ -1045,7 +1045,16 @@ body { background-image: linear-gradient(90deg, transparent 9%, rgb(103 232 249 
 .finding, .card[id], h2[id] { scroll-margin-top: calc(var(--header-height) + 24px); }
 .consideration-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .page-outline { display: none; }
+.correspondence-note { display: none; }
 @media (min-width: 1700px) {
+  .correspondence-note { display: block; position: fixed; top: calc(var(--header-height) + 52px); right: clamp(20px, 3vw, 64px); width: min(200px, calc((100vw - 1100px) / 2 - 100px)); max-height: calc(100dvh - var(--header-height) - 100px); overflow-y: auto; border-top: 1px solid var(--border); padding-top: 16px; }
+  .correspondence-note .margin-label { margin: 0 0 24px; color: var(--muted); font-size: 10px; letter-spacing: .15em; }
+  .correspondence-note figure { margin: 0; }
+  .correspondence-note img { display: block; width: 100%; height: auto; margin: 8px 0; }
+  .correspondence-note .diagram-label { display: block; color: var(--muted); font-size: 12px; text-align: center; }
+  .correspondence-note figcaption { margin: 24px 0 16px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+  .correspondence-note a { color: var(--accent); font-size: 12px; line-height: 1.7; }
+  .correspondence-note small { display: block; margin-top: 20px; color: var(--muted); font-size: 10px; }
   .page-outline { display: block; position: fixed; top: calc(var(--header-height) + 52px); left: clamp(20px, 3vw, 64px); width: min(200px, calc((100vw - 1100px) / 2 - 100px)); max-height: calc(100dvh - var(--header-height) - 100px); overflow-y: auto; border-left: 1px solid var(--border); padding-left: 16px; }
   .page-outline p { font-size: 10px; letter-spacing: .15em; color: var(--muted); }
   .page-outline a { padding: 8px 0; font-size: 12px; border-radius: 0; }
