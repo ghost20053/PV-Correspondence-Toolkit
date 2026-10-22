@@ -33,42 +33,16 @@
     <!-- Main content -->
     <main class="content" id="main-content" tabindex="-1">
 <section class="hero page-intro"><span class="eyebrow">PRACTICE-DERIVED TOOLS</span><h1>Developer Toolkit</h1><p>Six design considerations, a reflective worksheet and a worked calibration example for examining physical–virtual interaction.</p></section>
-<section class="section" id="principles">
-        <h2>Six Design Considerations</h2>
-        <p>Questions to guide your interaction design.</p>
-        <div class="card-grid">
-          <article class="card">
-            <span>01</span>
-            <h3>Intended Action</h3>
-            <p>What should the player physically do?</p>
-          </article>
-          <article class="card">
-            <span>02</span>
-            <h3>Physical Counterpart</h3>
-            <p>What real object supports the action?</p>
-          </article>
-          <article class="card">
-            <span>03</span>
-            <h3>Correspondence</h3>
-            <p>What positions or movements must align?</p>
-          </article>
-          <article class="card">
-            <span>04</span>
-            <h3>System Knowledge</h3>
-            <p>What does the application actually track?</p>
-          </article>
-          <article class="card">
-            <span>05</span>
-            <h3>Starting Arrangement</h3>
-            <p>Where must objects and hands begin?</p>
-          </article>
-          <article class="card">
-            <span>06</span>
-            <h3>Onboarding</h3>
-            <p>How does the player locate and calibrate?</p>
-          </article>
-        </div>
-      </section><section class="section" id="worksheet">
+<section class="section" id="principles"><h2>Six Design Considerations</h2><p>These questions reproduce the terminology and order of Table 1 in the exegesis. They are practice-derived prompts for reflection, not sequential steps or a validated assessment framework. <a href="research.html#findings">See how the four findings informed them</a>.</p><div class="card-grid consideration-grid"><article class="card" id="intended-action"><span>01</span><h3>Intended Action</h3><p><strong>What physical contact does the action promise?</strong></p><p>Define the action and the contact or feedback the player should expect.</p><p><strong>Prototype example:</strong> Resting hands on the table requires a reliable contact surface; grasping a cube requires compatible hand positioning.</p><p><a href="research.html#finding-action">Related research finding</a> &middot; <a href="#case-study">Toolkit resource</a></p></article>
+<article class="card" id="physical-counterpart"><span>02</span><h3>Physical Counterpart</h3><p><strong>Which available object can support that action?</strong></p><p>Choose a real object for its relevant contact surfaces, size and stability.</p><p><strong>Prototype example:</strong> The tabletop supplies a stable surface and spatial reference; cubes and a chest supply attainable physical contact surfaces.</p><p><a href="research.html#finding-action">Related research finding</a> &middot; <a href="#downloads">Toolkit resource</a></p></article>
+<article class="card" id="correspondence"><span>03</span><h3>Correspondence</h3><p><strong>Which properties must match for the action to make sense?</strong></p><p>Identify the dimensions, positions, orientations or movements that matter for this action.</p><p><strong>Prototype example:</strong> The tabletop needs to correspond in height and location. Moving a cube also raises orientation and motion-matching demands.</p><p><a href="research.html#finding-action">Related research finding</a> &middot; <a href="#worksheet">Toolkit resource</a></p></article>
+<article class="card" id="system-knowledge"><span>04</span><h3>System Knowledge</h3><p><strong>What can the hardware actually detect?</strong></p><p>Separate sensed information from assumptions about physical objects and system state.</p><p><strong>Prototype example:</strong> Tracked hands supply live position data; the engine cannot independently detect untracked prop orientation, and occlusion can affect grasping.</p><p><a href="research.html#finding-tracking">Related research finding</a> &middot; <a href="#worksheet">Toolkit resource</a></p></article>
+<article class="card" id="starting-arrangement"><span>05</span><h3>Starting Arrangement</h3><p><strong>What physical layout does the design assume?</strong></p><p>Make the initial physical conditions explicit and consider what happens if they change.</p><p><strong>Prototype example:</strong> The marked cloth establishes repeatable hand and prop positions without tracking subsequently moved objects.</p><p><a href="research.html#finding-layout">Related research finding</a> &middot; <a href="#downloads">Toolkit resource</a></p></article>
+<article class="card" id="onboarding"><span>06</span><h3>Onboarding</h3><p><strong>How will the player discover and establish that arrangement?</strong></p><p>Help the wearer locate the physical setup and perform a meaningful calibration action.</p><p><strong>Prototype example:</strong> Passthrough reveals the real table; hands-on-table calibration replaces reaching for virtual targets.</p><p><a href="research.html#finding-calibration">Related research finding</a> &middot; <a href="#case-study">Toolkit resource</a></p></article></div></section><section class="section" id="downloads"><span class="eyebrow">DEVELOPER TOOLKIT</span><h2>Downloadable Toolkit Resources</h2><p>Use the six design considerations to organise observations and revisions. These are the supplied Word documents, preserved unchanged; historical Appendix C labels remain inside the files.</p><div class="resource-grid">
+<article class="resource-card"><span class="resource-tag">RESOURCE 01</span><h3>Reusable Developer Worksheet</h3><p>A blank worksheet for recording intended actions, physical counterparts, correspondence requirements, observations and revisions.</p><a download href="assets/Appendix_C_01_Reusable_Developer_Worksheet.docx">Download blank worksheet (.docx)</a><a href="#worksheet">Use the interactive worksheet</a></article>
+<article class="resource-card"><span class="resource-tag">RESOURCE 02</span><h3>Completed Calibration Example</h3><p>A worked account of the transition from virtual fake-hand targets to hands-on-table calibration.</p><a download href="assets/Appendix_C_02_Completed_Worksheet_Calibration.docx">Download calibration example (.docx)</a><a href="#case-study">Read the worked example</a></article>
+<article class="resource-card"><span class="resource-tag">RESOURCE 03</span><h3>Physical Setup and Replication Guide</h3><p>The original tabletop arrangement, physical props, setup considerations and limits of replication.</p><a download href="assets/Appendix_C_03_Physical_Setup_Replication_Guide.docx">Download setup guide (.docx)</a><a href="prototype.html#replication">Read setup and replication details</a></article></div></section>
+<section class="section" id="worksheet">
         <span class="eyebrow">INTERACTIVE TOOL</span>
         <h2>Developer Worksheet</h2>
         <p>Document one physical&ndash;virtual interaction or meaningful iteration using the five-stage reflective workflow.</p>
@@ -184,9 +158,9 @@
           </form>
         </div>
       </section><section class="section case-study" id="case-study">
-        <span class="eyebrow">DOCUMENT 02 &mdash; COMPLETED EXAMPLE</span>
+        <span class="eyebrow">RESOURCE 02 &mdash; COMPLETED EXAMPLE</span>
         <h2>Case Study: Hands-on-Table Calibration</h2>
-        <p>A documented revision from virtual fake-hand targets to physical tabletop contact in the original Honours prototype.</p>
+        <p>A documented revision from virtual fake-hand targets to physical tabletop contact in the original Honours prototype. Read this alongside <a href="research.html#finding-calibration">Finding 5.2</a>, journal Sections 15–16 and 21, and <a href="evidence.html?category=CAL#archive">calibration screenshots and recordings</a>.</p>
         <div class="case-study-meta">
           <div>
             <span>PROJECT</span>

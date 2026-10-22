@@ -11,6 +11,21 @@ demonstration and developer toolkit.
 - `prototype.html`: Windows download and physical setup / replication guide.
 - `toolkit.html`: design considerations, interactive worksheet and completed example.
 
+The five-page structure and main navigation are retained. `research.html#findings`
+connects Chapter 5 findings to the six questions in Table 1 of the supplied exegesis.
+`evidence.html#evidence-guide` provides journal-based reading routes through the
+three Action Research cycles, without reclassifying the complete archive.
+Evidence links accept `category`, `type` and `q` query parameters. A compact
+"On this page" guide uses the wide-screen margin and is hidden on smaller screens.
+
+The downloadable worksheet, completed example, replication guide and journal match
+the supplied current Word files byte-for-byte. The completed example was already
+identical; the other three files were replaced at their existing download paths.
+Their internal content and historical labels were not edited. The supplied
+exegesis was consulted as a reference only and is not published as a download.
+Website method descriptions use "practice-led"; the considerations remain
+"practice-derived", matching their role in the exegesis.
+
 Publish all five HTML pages with the shared CSS, JavaScript and assets.
 Old index section bookmarks redirect to their new pages when JavaScript is enabled.
 The worksheet retains its existing browser-storage key.

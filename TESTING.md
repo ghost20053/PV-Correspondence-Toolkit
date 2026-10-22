@@ -4,6 +4,42 @@ Test the website on a desktop browser and a phone. Record the browser, device,
 page or section, steps taken, expected result and actual result for each issue.
 Include a screenshot where useful.
 
+## Verified in the research-content update
+
+- Checked 679 local HTML references across the existing five pages: all page
+  anchors, script targets and document links resolve, apart from the nine
+  previously missing video files listed below. The archive data and filenames
+  were not changed.
+- Compared the six questions, order and finding mappings against Table 1 in the
+  supplied exegesis. Read the journal evidence matrix and section references
+  before adding the three-cycle reading guide. No complete filename-to-cycle
+  mapping is claimed.
+- All four supplied Word files match the website copies by SHA-256. Downloaded
+  each from the local HTTP preview and verified the downloaded hash as well.
+  This checks transfer fidelity, not Word layout; the documents were not edited.
+- Public website, original source repository, commit history, YouTube fallback,
+  Windows ZIP and checksum URLs returned HTTP 200 to HEAD requests. This does
+  not establish full YouTube playback or VR runtime compatibility. The GitHub
+  API also confirmed the release assets and ZIP digest.
+- The embedded final demonstration played in the browser (ready state 4,
+  playback advanced beyond 25 seconds). The complete 17-minute recording was
+  not watched end-to-end during this check.
+- Browser checks covered the wide-screen overview and margin guide, findings
+  links, calibration archive filter, mobile findings/toolkit layout and mobile
+  menu. At a 390px viewport there was no horizontal document overflow.
+- Worksheet checks covered entering a test project and interaction, moving to
+  Plan, reloading to confirm saved entries, exporting and inspecting the text
+  file, then resetting the test entries. The existing worksheet script and
+  storage key remain unchanged. JavaScript syntax and Git whitespace checks pass.
+
+## Additional evidence limits
+
+Separate unaltered copies of the final headset and external recordings named in
+the journal have not been verified in the website files. Compressed previews are
+not described as masters. Historical journal names are not automatically mapped
+to renamed archive previews. The exegesis is used as a reference, not offered as
+a new download. These local website changes have not been committed or deployed.
+
 ## Known issues before handoff
 
 - Overview rendering was checked at desktop and narrow mobile widths. The prototype page link and published download target were verified. Full device and VR testing remain outstanding. JavaScript syntax and page links passed checks.

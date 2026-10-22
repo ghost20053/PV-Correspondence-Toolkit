@@ -113,5 +113,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   document.getElementById("archive-controls").hidden = false;
   document.getElementById("archive-pagination").hidden = false;
+  // Shared evidence links open a relevant view without changing the archive.
+  const params = new URLSearchParams(window.location.search);
+  search.value = params.get("q") || "";
+  if (Array.from(type.options).some(option => option.value === params.get("type"))) {
+    type.value = params.get("type");
+  }
+  if (Array.from(category.options).some(option => option.value === params.get("category"))) {
+    category.value = params.get("category");
+  }
   render();
 });

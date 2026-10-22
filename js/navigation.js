@@ -28,6 +28,22 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   updateHeaderOffset();
   new ResizeObserver(updateHeaderOffset).observe(header);
+  const outline = document.createElement("nav");
+  outline.className = "page-outline";
+  outline.setAttribute("aria-label", "On this page");
+  const outlineTitle = document.createElement("p");
+  outlineTitle.textContent = "ON THIS PAGE";
+  outline.append(outlineTitle);
+  document.querySelectorAll("main > section").forEach(function (section) {
+    const heading = section.querySelector("h2");
+    const anchor = section.id || (heading && heading.id);
+    if (!heading || !anchor) return;
+    const link = document.createElement("a");
+    link.href = "#" + anchor;
+    link.textContent = heading.textContent;
+    outline.append(link);
+  });
+  if (outline.querySelector("a")) document.body.append(outline);
   function closeMenu() {
     toggle.setAttribute("aria-expanded", "false");
     header.classList.remove("menu-open");
