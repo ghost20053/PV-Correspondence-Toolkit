@@ -73,7 +73,10 @@ document.addEventListener("DOMContentLoaded", function () {
   readingLayout.append(main, correspondence);
   function updateIllustrationPosition() {
     const availableHeight = window.innerHeight - header.getBoundingClientRect().height - 56;
-    correspondence.classList.toggle("illustration-in-flow", correspondence.scrollHeight > availableHeight);
+    const image = correspondence.querySelector("img");
+    const textHeight = correspondence.getBoundingClientRect().height - image.getBoundingClientRect().height;
+    const imageHeight = Math.max(0, Math.min(300, Math.floor(availableHeight - textHeight)));
+    correspondence.style.setProperty("--illustration-height", imageHeight + "px");
   }
   const illustrationObserver = new ResizeObserver(updateIllustrationPosition);
   illustrationObserver.observe(correspondence);

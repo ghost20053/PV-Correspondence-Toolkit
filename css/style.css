@@ -1069,19 +1069,18 @@ body { background-image: radial-gradient(ellipse at 90% 0%, #162b39 0, transpare
 .page-outline a { display: block; font-size: 14px; font-weight: 600; line-height: 1.5; padding: 12px 14px; margin-bottom: 6px; border-left: 2px solid var(--border); border-radius: 0 6px 6px 0; }
 .page-outline a:hover, .page-outline a[aria-current="location"] { color: var(--accent); border-left-color: var(--accent); background: rgb(103 232 249 / 7%); }
 .correspondence-note { grid-area: illustration; max-height: none; overflow: visible; border-top: 1px solid var(--border); padding-top: 16px; }
-/* Tall illustrations scroll with the page rather than inside a separate panel. */
-.correspondence-note.illustration-in-flow { position: static; }
-.correspondence-note .margin-label { margin: 0 0 24px; color: var(--muted); font-size: 10px; letter-spacing: .15em; }
+/* Fit the image around its text while keeping the panel sticky. */
+.correspondence-note .margin-label { margin: 0 0 12px; color: var(--muted); font-size: 10px; letter-spacing: .15em; }
 .correspondence-note figure { margin: 0; }
-.correspondence-note img { display: block; width: 100%; height: auto; max-height: 300px; object-fit: contain; margin: 8px 0; }
+.correspondence-note img { display: block; width: 100%; height: var(--illustration-height, 300px); object-fit: contain; margin: 8px 0; }
 .correspondence-note .diagram-label { display: block; color: var(--muted); font-size: 12px; text-align: center; }
-.correspondence-note figcaption { margin: 24px 0 16px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.correspondence-note figcaption { margin: 12px 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
 .correspondence-note a { color: var(--accent); font-size: 12px; line-height: 1.7; }
-.correspondence-note small { display: block; margin-top: 20px; color: var(--muted); font-size: 10px; }
+.correspondence-note small { display: block; margin-top: 10px; color: var(--muted); font-size: 10px; }
 @media (max-width: 1199px) {
   .reading-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "outline illustration" "main main"; gap: 24px; }
   .page-outline, .correspondence-note { position: static; max-height: none; }
-  .correspondence-note img { max-height: 180px; }
+  .correspondence-note img { height: 180px; }
 }
 @media (max-width: 600px) {
   .reading-layout { grid-template-columns: minmax(0, 1fr); grid-template-areas: "outline" "illustration" "main"; }
