@@ -1044,34 +1044,51 @@ body { background-image: radial-gradient(ellipse at 90% 0%, #162b39 0, transpare
 .finding a, .card a { color: var(--accent); }
 .finding, .card[id], h2[id] { scroll-margin-top: calc(var(--header-height) + 24px); }
 .consideration-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.page-outline { display: none; }
-.correspondence-note { display: none; }
-@media (min-width: 1700px) {
-  .correspondence-note { display: block; position: fixed; top: calc(var(--header-height) + 52px); right: clamp(20px, 3vw, 64px); width: min(200px, calc((100vw - 1100px) / 2 - 100px)); max-height: calc(100dvh - var(--header-height) - 100px); overflow-y: auto; border-top: 1px solid var(--border); padding-top: 16px; }
-  .correspondence-note .margin-label { margin: 0 0 24px; color: var(--muted); font-size: 10px; letter-spacing: .15em; }
-  .correspondence-note figure { margin: 0; }
-  .correspondence-note img { display: block; width: 100%; height: auto; margin: 8px 0; }
-  .correspondence-note .diagram-label { display: block; color: var(--muted); font-size: 12px; text-align: center; }
-  .correspondence-note figcaption { margin: 24px 0 16px; color: var(--muted); font-size: 13px; line-height: 1.7; }
-  .correspondence-note a { color: var(--accent); font-size: 12px; line-height: 1.7; }
-  .correspondence-note small { display: block; margin-top: 20px; color: var(--muted); font-size: 10px; }
-  .page-outline { display: block; position: fixed; top: calc(var(--header-height) + 52px); left: clamp(20px, 3vw, 64px); width: min(200px, calc((100vw - 1100px) / 2 - 100px)); max-height: calc(100dvh - var(--header-height) - 100px); overflow-y: auto; border-left: 1px solid var(--border); padding-left: 16px; }
-  .page-outline p { font-size: 10px; letter-spacing: .15em; color: var(--muted); }
-  .page-outline a { padding: 8px 0; font-size: 12px; border-radius: 0; }
-  .page-outline a:hover { background: transparent; color: var(--accent); }
+/* Keep reading aids visible at every screen size without overlapping content. */
+.reading-layout {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1100px) 190px;
+  grid-template-areas: "outline main illustration";
+  justify-content: center;
+  align-items: start;
+  gap: 32px;
+  padding: 28px clamp(20px, 3vw, 64px);
+}
+.reading-layout > .content { grid-area: main; min-width: 0; width: 100%; padding: 0; margin: 0; }
+.page-outline, .correspondence-note {
+  display: block;
+  position: sticky;
+  top: calc(var(--header-height) + 28px);
+  min-width: 0;
+  max-height: calc(100dvh - var(--header-height) - 56px);
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+}
+.page-outline { grid-area: outline; }
+.page-outline p { font-size: 11px; font-weight: 700; letter-spacing: .15em; color: var(--muted); margin-bottom: 16px; }
+.page-outline a { display: block; font-size: 14px; font-weight: 600; line-height: 1.5; padding: 12px 14px; margin-bottom: 6px; border-left: 2px solid var(--border); border-radius: 0 6px 6px 0; }
+.page-outline a:hover, .page-outline a[aria-current="location"] { color: var(--accent); border-left-color: var(--accent); background: rgb(103 232 249 / 7%); }
+.correspondence-note { grid-area: illustration; border-top: 1px solid var(--border); padding-top: 16px; }
+.correspondence-note .margin-label { margin: 0 0 24px; color: var(--muted); font-size: 10px; letter-spacing: .15em; }
+.correspondence-note figure { margin: 0; }
+.correspondence-note img { display: block; width: 100%; height: auto; max-height: 300px; object-fit: contain; margin: 8px 0; }
+.correspondence-note .diagram-label { display: block; color: var(--muted); font-size: 12px; text-align: center; }
+.correspondence-note figcaption { margin: 24px 0 16px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.correspondence-note a { color: var(--accent); font-size: 12px; line-height: 1.7; }
+.correspondence-note small { display: block; margin-top: 20px; color: var(--muted); font-size: 10px; }
+@media (max-width: 1199px) {
+  .reading-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "outline illustration" "main main"; gap: 24px; }
+  .page-outline, .correspondence-note { position: static; max-height: none; }
+  .correspondence-note img { max-height: 180px; }
+}
+@media (max-width: 600px) {
+  .reading-layout { grid-template-columns: minmax(0, 1fr); grid-template-areas: "outline" "illustration" "main"; }
 }
 @media (max-width: 850px) { .research-route { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 650px) { .research-route, .consideration-grid { grid-template-columns: 1fr; } }
 /* Override the original section offset so deep links clear the fixed header. */
 .content > section, .content h2[id] { scroll-margin-top: calc(var(--header-height) + 24px); }
 
-/* Distinct, readable margin navigation without background rules crossing it. */
-@media (min-width: 1700px) {
-  .page-outline { width: min(240px, calc((100vw - 1100px) / 2 - 80px)); padding-left: 0; border-left: 0; }
-  .page-outline p { font-size: 11px; font-weight: 700; margin-bottom: 16px; }
-  .page-outline a { display: block; font-size: 14px; font-weight: 600; line-height: 1.5; padding: 12px 14px; margin-bottom: 6px; border-left: 2px solid var(--border); border-radius: 0 6px 6px 0; }
-  .page-outline a:hover, .page-outline a[aria-current="location"] { color: var(--accent); border-left-color: var(--accent); background: rgb(103 232 249 / 7%); }
-}
 .research-route { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
 .research-route li { grid-column: span 2; position: relative; border: 1px solid var(--border); border-radius: 10px; padding: 24px; background: rgb(23 35 56 / 55%); }
 .research-route li:nth-child(n+4) { grid-column: span 3; }
@@ -1084,4 +1101,4 @@ body { background-image: radial-gradient(ellipse at 90% 0%, #162b39 0, transpare
  .research-route { grid-template-columns: 1fr; }
  .research-route li, .research-route li:nth-child(n+4) { grid-column: auto; }
 }
-@media print { .page-outline, .correspondence-note { display: none; } }
+@media print { .reading-layout { display: block; padding: 0; } .page-outline, .correspondence-note { display: none; } }

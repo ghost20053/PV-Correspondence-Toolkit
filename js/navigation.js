@@ -65,7 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
     </figure>
     <a href="${illustration[6]}">${illustration[7]} →</a>
     <small>Conceptual illustration</small>`;
-  document.body.append(correspondence);
+  const main = document.querySelector("main.content");
+  const readingLayout = document.createElement("div");
+  readingLayout.className = "reading-layout";
+  main.before(readingLayout);
+  if (outline.querySelector("a")) readingLayout.append(outline);
+  readingLayout.append(main, correspondence);
   function closeMenu() {
     toggle.setAttribute("aria-expanded", "false");
     header.classList.remove("menu-open");
