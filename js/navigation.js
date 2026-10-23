@@ -71,6 +71,15 @@ document.addEventListener("DOMContentLoaded", function () {
   main.before(readingLayout);
   if (outline.querySelector("a")) readingLayout.append(outline);
   readingLayout.append(main, correspondence);
+  function updateIllustrationPosition() {
+    const availableHeight = window.innerHeight - header.getBoundingClientRect().height - 56;
+    correspondence.classList.toggle("illustration-in-flow", correspondence.scrollHeight > availableHeight);
+  }
+  const illustrationObserver = new ResizeObserver(updateIllustrationPosition);
+  illustrationObserver.observe(correspondence);
+  illustrationObserver.observe(header);
+  window.addEventListener("resize", updateIllustrationPosition);
+  updateIllustrationPosition();
   function closeMenu() {
     toggle.setAttribute("aria-expanded", "false");
     header.classList.remove("menu-open");
